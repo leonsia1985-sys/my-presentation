@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 발표 | Reveal.js Template</title>
+
+    <!-- Reveal.js 기본 스타일 및 커스텀 블랙 테마 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css" id="theme">
+    
+    <!-- Pretendard 폰트 적용 및 커스텀 스타일 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.min.css" />
+    <style>
+        .reveal {
+            font-family: 'Pretendard', sans-serif;
+        }
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        /* 강조 컬러 및 박스 디자인 */
+        .highlight {
+            color: #4f46e5;
+        }
+        .custom-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- 1. 표지 슬라이드 -->
+            <section data-background-gradient="linear-gradient(to bottom, #111827, #1f2937)">
+                <h1 style="font-size: 2.5em; margin-bottom: 20px;">프로젝트 <span style="color: #6366f1;">발표 제목</span></h1>
+                <p style="color: #9ca3af; font-size: 1.1em;">웹 기반 인터랙티브 프레젠테이션</p>
+                <div style="margin-top: 60px; font-size: 0.8em; color: #6b7280;">
+                    발표자: 이아름 | 2026.11
+                </div>
+            </section>
+
+            <!-- 2. 프로젝트 개요 (목록형) -->
+            <section>
+                <h2>📌 프로젝트 개요</h2>
+                <p class="fragment" style="font-size: 0.9em; color: #d1d5db; margin-top: 20px;">
+                    본 프로젝트는 웹 표준 기술을 활용하여 직관적이고 몰입감 있는 정보를 전달하는 것을 목표로 합니다.
+                </p>
+                <ul style="font-size: 0.8em; margin-top: 30px; line-height: 1.6;">
+                    <li class="fragment"><strong>목적:</strong> 사용자 경험 극대화 및 접근성 향상</li>
+                    <li class="fragment"><strong>기술 스택:</strong> HTML5, CSS3, JavaScript, Reveal.js</li>
+                    <li class="fragment"><strong>기대 효과:</strong> 플랫폼 제약 없는 원활한 공유 및 배포</li>
+                </ul>
+            </section>
+
+            <!-- 3. 핵심 기능 (2차원 수직 슬라이드 구조) -->
+            <section>
+                <section>
+                    <h2>⚙️ 핵심 기능</h2>
+                    <p>아래 방향 화살표를 눌러 상세 내용을 확인하세요.</p>
+                </section>
+                <section>
+                    <h3>01. 반응형 레이아웃</h3>
+                    <p style="font-size: 0.8em; color: #9ca3af;">다양한 디스플레이 환경에서 깨짐 없이 완벽하게 동작합니다.</p>
+                </section>
+                <section>
+                    <h3>02. 인터랙티브 요소</h3>
+                    <p style="font-size: 0.8em; color: #9ca3af;">애니메이션과 다단 그리드를 활용해 가독성을 높였습니다.</p>
+                </section>
+            </section>
+
+            <!-- 4. 상세 아키텍처 및 카드 그리드 레이아웃 -->
+            <section>
+                <h2>📊 시스템 아키텍처</h2>
+                <div class="grid-2" style="margin-top: 40px; font-size: 0.75em;">
+                    <div class="custom-card">
+                        <h4 style="color: #818cf8; margin-top: 0;">Frontend</h4>
+                        <p>Reveal.js 프레임워크를 기반으로 슬라이드 구조 정의 및 CSS 커스텀 스타일링 적용</p>
+                    </div>
+                    <div class="custom-card">
+                        <h4 style="color: #34d399; margin-top: 0;">Deployment</h4>
+                        <p>GitHub Pages 또는 정적 웹 호스팅 서비스를 통해 즉각적인 링크 공유 가능</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 마무리 슬라이드 -->
+            <section data-background-gradient="linear-gradient(to top, #111827, #1f2937)">
+                <h2>Thank You</h2>
+                <p style="color: #9ca3af; font-size: 0.9em; margin-top: 20px;">질문이나 피드백이 있으신가요?</p>
+                <div style="margin-top: 40px; font-size: 0.8em; color: #6366f1;">
+                    Q & A
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js 핵심 자바스크립트 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+    <script>
+        // Reveal.js 초기화 설정
+        Reveal.initialize({
+            hash: true,          // 주소창에 슬라이드 번호(인덱스) 표시
+            slideNumber: 'c/t',  // 슬라이드 번호 표기법 (현재/전체)
+            transition: 'slide', // 전환 효과 (none/fade/slide/convex/concave/zoom)
+            center: true,        // 수직 가운데 정렬
+        });
+    </script>
+</body>
+</html>
