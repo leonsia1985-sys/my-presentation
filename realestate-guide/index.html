@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>동의대 부동산자산경영학과 입학 전 예습 가이드</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;display=swap">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: #0d1a17; overflow: hidden; }
+h1, h2, h3 { margin: 0; }
+#viewport { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+#stage { position: relative; width: 1920px; height: 1080px; flex: none; transform-origin: center center; box-shadow: 0 20px 60px rgba(0,0,0,.45); overflow: hidden; }
+:root {
+  --dark: #17322C;
+  --dark2: #21413A;
+  --light: #F6F3EC;
+  --alt: #EAE5D8;
+  --paper: #FCFBF7;
+  --ink: #1E2A27;
+  --soft: #4D5A55;
+  --line: #D4CDBC;
+  --accent: #A84E1C;
+  --accent-fill: #E0914F;
+  --accent-light: #EDA86E;
+  --mint: #BFD6CF;
+}
+
+section {
+  padding: 128px 128px 160px;
+  background: var(--light);
+  color: var(--ink);
+  font-family: 'Noto Sans KR', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  word-break: keep-all;
+}
+section.alt { background: var(--alt); }
+section.dark { background: var(--dark); color: var(--light); }
+section.accent { background: var(--accent-fill); color: var(--ink); }
+
+p { margin: 0; font-size: 24px; line-height: 1.5; }
+
+.eyebrow { font-size: 24px; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin: 0 0 14px; }
+h1.title { font-size: 96px; font-weight: 900; line-height: 1.15; margin: 0 0 40px; color: var(--light); letter-spacing: -0.01em; }
+h2 { font-size: 60px; font-weight: 700; line-height: 1.2; margin: 0 0 28px; color: var(--ink); letter-spacing: -0.01em; }
+.lead { font-size: 28px; line-height: 1.55; color: var(--soft); margin: 0 0 40px; max-width: 1560px; }
+.note { font-size: 24px; color: var(--soft); margin: 24px 0 0; }
+.statement { font-size: 36px; font-weight: 700; line-height: 1.45; color: var(--ink); }
+.foot { position: absolute; left: 128px; bottom: 64px; width: 1664px; font-size: 24px; color: var(--soft); }
+
+.dark h2 { color: var(--light); }
+.dark .lead { color: var(--mint); }
+.dark .eyebrow { color: var(--accent-light); }
+.dark .foot { color: var(--mint); }
+.dark .statement { color: var(--light); }
+.dark .byline { font-size: 24px; color: var(--mint); }
+.accent .eyebrow { color: var(--ink); }
+.accent h2 { color: var(--ink); }
+.accent .foot { color: var(--ink); }
+
+/* layout */
+.row { display: flex; gap: 48px; }
+.col { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+.cards { display: flex; gap: 28px; }
+.grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+/* cards */
+.card { flex: 1; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 10px; }
+.card h3 { font-size: 30px; font-weight: 700; line-height: 1.3; margin: 0; color: var(--ink); }
+.card p { font-size: 24px; line-height: 1.5; color: var(--soft); }
+.card .tag { font-size: 24px; font-weight: 700; color: var(--accent); }
+.card .stat { font-family: 'Space Grotesk', 'Noto Sans KR', Arial, sans-serif; font-size: 64px; font-weight: 700; line-height: 1.05; color: var(--accent); }
+.card .link { font-size: 24px; color: var(--accent); font-weight: 500; }
+.tl .card { border-top: 6px solid var(--accent); border-radius: 0 0 16px 16px; }
+.dark .card { background: var(--dark2); border-color: #2F5249; }
+.dark .card h3 { color: var(--light); }
+.dark .card p { color: var(--mint); }
+.dark .card .tag { color: var(--accent-light); }
+.dark .card .stat { color: var(--accent-light); }
+
+.chip { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 18px 24px; display: flex; flex-direction: column; gap: 4px; }
+.chip h3 { font-size: 26px; font-weight: 700; margin: 0; color: var(--ink); line-height: 1.3; }
+.chip p { font-size: 24px; color: var(--soft); line-height: 1.4; }
+
+.stat { font-family: 'Space Grotesk', 'Noto Sans KR', Arial, sans-serif; font-size: 64px; font-weight: 700; line-height: 1.05; color: var(--accent); }
+.big { font-family: 'Space Grotesk', 'Noto Sans KR', Arial, sans-serif; font-size: 96px; font-weight: 700; line-height: 1; color: var(--accent); }
+.dark .big { color: var(--accent-light); }
+
+.callout { background: var(--dark); border-radius: 16px; padding: 28px 36px; }
+.callout p { color: var(--light); font-size: 26px; line-height: 1.5; }
+.callout .tag { color: var(--accent-light); font-weight: 700; font-size: 24px; }
+
+.formula { font-family: 'Space Grotesk', 'Noto Sans KR', Arial, sans-serif; font-size: 28px; font-weight: 500; color: var(--ink); line-height: 1.4; }
+.chip .formula, .card .formula { font-family: 'Space Grotesk', 'Noto Sans KR', Arial, sans-serif; font-size: 28px; font-weight: 500; color: var(--ink); }
+
+/* steps */
+.steps { display: flex; gap: 16px; }
+.step { flex: 1; background: var(--paper); border-top: 6px solid var(--accent); border-radius: 0 0 12px 12px; padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 6px; }
+.step .n { font-family: 'Space Grotesk', 'Noto Sans KR', Arial, sans-serif; font-size: 36px; font-weight: 700; color: var(--accent); line-height: 1.1; }
+.step p { font-size: 24px; line-height: 1.4; color: var(--ink); }
+
+/* lists */
+ul.list, ol.list { margin: 0; padding-left: 36px; }
+ul.list li, ol.list li { font-size: 26px; line-height: 1.5; color: var(--soft); margin: 0 0 14px; }
+.dark ul.list li { color: var(--mint); }
+
+/* tables */
+table { border-collapse: collapse; width: 100%; font-size: 24px; }
+th { background: var(--dark); color: var(--light); text-align: left; padding: 12px 20px; font-weight: 700; font-size: 24px; }
+td { padding: 11px 20px; border-bottom: 1px solid var(--line); color: var(--ink); line-height: 1.35; vertical-align: top; font-size: 24px; }
+td.k { font-weight: 700; }
+td.n { font-family: 'Space Grotesk', 'Noto Sans KR', Arial, sans-serif; font-weight: 500; text-align: right; }
+td.hl { font-weight: 700; color: var(--accent); }
+
+/* motion */
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+section h2 { animation: rise 0.5s ease-out both; }
+section .cards, section .row, section table, section .grid2, section .grid3, section .grid4, section .steps { animation: rise 0.6s ease-out 0.15s both; }
+
+#stage > section { position: absolute; inset: 0; width: 1920px; height: 1080px; display: none; overflow: hidden; }
+#stage > section.active { display: flex; }
+#hud { position: fixed; right: 16px; bottom: 12px; font: 500 14px 'Noto Sans KR', Arial, sans-serif; color: #BFD6CF; opacity: .75; user-select: none; display: flex; gap: 8px; align-items: center; }
+#hud button { background: rgba(255,255,255,.08); color: inherit; border: 1px solid rgba(255,255,255,.18); border-radius: 6px; padding: 4px 10px; font: inherit; cursor: pointer; }
+#hud button:hover { background: rgba(255,255,255,.18); }
+#progress { position: fixed; left: 0; top: 0; height: 4px; background: #E0914F; transition: width .25s; }
+@media print {
+  html, body { overflow: visible; background: none; }
+  #viewport { position: static; display: block; }
+  #stage { transform: none !important; width: auto; height: auto; box-shadow: none; overflow: visible; }
+  #stage > section { position: relative; display: flex !important; page-break-after: always; }
+  #hud, #progress { display: none; }
+  @page { size: 1920px 1080px; margin: 0; }
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="viewport"><div id="stage">
+<section id="cover" class="dark" style="justify-content:flex-end">
+<p class="eyebrow">입학 전 12주 예습 · 2026.12 – 2027.2</p>
+<h1 class="title">동의대 부동산자산경영학과<br>과목별 가이드 &amp; 예습 노트</h1>
+<p class="lead">법(민법·공법)과 숫자(수익률·금융), 두 축만 미리 잡아 두면 1학년 전공필수 과목을 훨씬 수월하게 따라갈 수 있습니다.</p>
+<p class="byline">2026년 11월 · 과목별 가이드라인 &amp; 예습 노트 요약본</p>
+</section>
+<section id="overview">
+<p class="eyebrow">01 · 학과 개요</p>
+<h2>토요일에 배우는 성인학습자 학과</h2>
+<p class="lead">미래융합대학 소속으로, 토요일 집중수업을 통해 부동산 투자·개발·자산관리를 이론과 실무, 사례 분석 중심으로 배웁니다.</p>
+<div class="cards">
+<div class="card"><p class="stat">9시간</p><h3>토요일 집중수업</h3><p>오전 9시 시작, 과목당 3시간씩 3과목. 체력과 집중력 관리가 학습 전략의 절반입니다.</p></div>
+<div class="card"><p class="stat">+ − × ÷</p><h3>어려운 수학은 없음</h3><p>수익률·대출 계산 같은 사칙연산 수준의 숫자 감각이면 충분합니다.</p></div>
+<div class="card"><p class="stat">100명</p><h3>2026학년도 모집</h3><p>평생학습자전형 40명 + 성인학습자전형(정원외) 60명. 직장인·자영업자·중개업 종사자 동기 네트워크가 큰 자산입니다.</p></div>
+</div>
+<p class="foot">출처: 학과 FAQ, 2026 수시 모집요강 · 02</p>
+</section>
+<section id="history" class="alt">
+<p class="eyebrow">01 · 학과 연혁</p>
+<h2>직업인 과정에서 단일 학과로</h2>
+<p class="lead">학과 인사말은 저성장 시대에 수익성 분석, 재무·금융 조달, 리스크 관리 역량이 중요해졌다고 강조합니다.</p>
+<div class="cards tl">
+<div class="card"><p class="stat">2016</p><h3>1기 50명 입학</h3><p>부동산금융·자산경영학과(직업인 과정)로 출발</p></div>
+<div class="card"><p class="stat">2023.7</p><h3>학부로 확대</h3><p>미래융합대학 부동산자산경영학부, 투자학·개발경영학 전공 분리</p></div>
+<div class="card"><p class="stat">2024</p><h3>학부 신입생 모집</h3><p>미래융합대학 신설과 함께 모집 시작</p></div>
+<div class="card"><p class="stat">2026</p><h3>학과명 변경</h3><p>학부 통합, ‘부동산자산경영학과’로 새 출발</p></div>
+</div>
+<p class="foot">출처: 학부 약사, 동의 TODAY, 2026 수시 모집요강, 학과 인사말 · 03</p>
+</section>
+<section id="curriculum">
+<p class="eyebrow">01 · 교과목 지도</p>
+<h2>전공필수 7과목, 전공선택은 이론에서 실무로</h2>
+<table>
+<tr><th style="width:300px">구분</th><th style="width:640px">과목</th><th>성격</th></tr>
+<tr><td class="k">전공필수</td><td>부동산과자산경영의이해</td><td>부동산학 전체 입문</td></tr>
+<tr><td class="k">전공필수</td><td>부동산공법</td><td>국토계획법·건축법·주택법 등 규제법</td></tr>
+<tr><td class="k">전공필수</td><td>부동산권리분석</td><td>등기부·공법 규제 분석</td></tr>
+<tr><td class="k">전공필수</td><td>수익형부동산투자실무</td><td>오피스텔·상가·꼬마빌딩 투자</td></tr>
+<tr><td class="k">전공필수</td><td>주택임대사업의이해</td><td>임대사업 절차·공공임대</td></tr>
+<tr><td class="k">전공필수</td><td>토지개발실무</td><td>토지 보는 법·수익성 분석</td></tr>
+<tr><td class="k">전공필수(과거 이수표)</td><td>판례중심민법</td><td>물권·계약·임대차 판례</td></tr>
+<tr><td class="k">전공선택 · 이론</td><td>부동산학원론, 투자론, 금융론, 입지선정론</td><td>이론 기초</td></tr>
+<tr><td class="k">전공선택 · 응용</td><td>시장분석, 경매와NPL투자, 글로벌시장론, 마케팅</td><td>3학년 응용</td></tr>
+<tr><td class="k">전공선택 · 실무</td><td>부동산건설관리실무, 캡스톤디자인</td><td>실무·프로젝트</td></tr>
+</table>
+<p class="foot">출처: 학과 교과목 개요, 옛 학과 졸업요구학점 안내 — 최종 기준은 입학 후 받는 이수표 · 04</p>
+</section>
+<section id="roadmap1" class="alt">
+<p class="eyebrow">02 · 12주 예습 로드맵 (1–6주)</p>
+<h2>12월–1월 초: 용어에서 민법까지</h2>
+<p class="lead" style="margin-bottom:28px">하루 1시간, 주 5일이면 충분합니다. 순서는 용어 → 민법 → 공법 → 투자·금융 → 현장.</p>
+<div class="grid3">
+<div class="card" style="padding:26px 28px;gap:6px"><p class="tag">1주 · 12월 1주</p><h3>용어 100개</h3><p>용어표 암기, 부동산 뉴스 매일 1건 읽기</p><p class="link">→ 전 과목 공통</p></div>
+<div class="card" style="padding:26px 28px;gap:6px"><p class="tag">2주 · 12월 2주</p><h3>부동산의 특성·가치</h3><p>부동산학개론 기본서 1–3장</p><p class="link">→ 자산경영의이해, 원론</p></div>
+<div class="card" style="padding:26px 28px;gap:6px"><p class="tag">3주 · 12월 3주</p><h3>민법 뼈대</h3><p>민법총칙(권리능력·의사표시·대리) 강의</p><p class="link">→ 판례중심민법</p></div>
+<div class="card" style="padding:26px 28px;gap:6px"><p class="tag">4주 · 12월 4주</p><h3>물권</h3><p>소유권·저당권·전세권·지상권 구별</p><p class="link">→ 권리분석, 경매</p></div>
+<div class="card" style="padding:26px 28px;gap:6px"><p class="tag">5주 · 1월 1주</p><h3>등기부 읽기</h3><p>내 집 등기부 발급 후 표제부·갑구·을구 해석</p><p class="link">→ 권리분석</p></div>
+<div class="card" style="padding:26px 28px;gap:6px"><p class="tag">6주 · 1월 2주</p><h3>임대차</h3><p>주택·상가 임대차보호법 대항력·우선변제권</p><p class="link">→ 민법, 임대사업</p></div>
+</div>
+<p class="foot">05</p>
+</section>
+<section id="roadmap2" class="alt">
+<p class="eyebrow">02 · 12주 예습 로드맵 (7–12주)</p>
+<h2>1월 중순–2월: 공법, 숫자, 현장</h2>
+<p class="lead" style="margin-bottom:28px">법과 숫자를 섞어서 공부하면 지루함이 줄어듭니다. 마지막 주에는 과목별 질문 리스트를 만듭니다.</p>
+<div class="grid3">
+<div class="card" style="padding:26px 28px;gap:6px"><p class="tag">7주 · 1월 3주</p><h3>공법 체계</h3><p>용도지역 21종, 건폐율·용적률, 토지이음 조회</p><p class="link">→ 공법, 토지개발</p></div>
+<div class="card" style="padding:26px 28px;gap:6px"><p class="tag">8주 · 1월 4주</p><h3>재무 기초</h3><p>현재가치·미래가치, 엑셀 PV/FV/PMT</p><p class="link">→ 투자론, 금융론</p></div>
+<div class="card" style="padding:26px 28px;gap:6px"><p class="tag">9주 · 2월 1주</p><h3>수익률</h3><p>캡레이트 계산, 오피스텔 1건 가상 분석</p><p class="link">→ 수익형부동산투자실무</p></div>
+<div class="card" style="padding:26px 28px;gap:6px"><p class="tag">10주 · 2월 2주</p><h3>대출·세금</h3><p>LTV·DSR 계산, 취득·보유·양도세 흐름</p><p class="link">→ 금융론, 조세</p></div>
+<div class="card" style="padding:26px 28px;gap:6px"><p class="tag">11주 · 2월 3주</p><h3>현장</h3><p>관심 단지 임장, 경매 매각물건명세서 읽기</p><p class="link">→ 입지선정론, 경매</p></div>
+<div class="card" style="padding:26px 28px;gap:6px"><p class="tag">12주 · 2월 4주</p><h3>정리</h3><p>과목별 질문 리스트 작성, 노트·폴더 정리</p><p class="link">→ 전체</p></div>
+</div>
+<p class="foot">06</p>
+</section>
+<section id="principles">
+<p class="eyebrow">02 · 공부 원칙</p>
+<h2>예습 원칙 5가지와 토요일 대비법</h2>
+<div class="row">
+<div class="col" style="flex:1.15">
+<ol class="list">
+<li><b>기본서는 공인중개사 교재로</b> — 개론·민법·공법을 가장 체계적으로 정리한 가성비 교재</li>
+<li><b>암기보다 지도</b> — 목표는 만점이 아니라 수업 용어가 낯설지 않게 하는 것</li>
+<li><b>내 집·내 동네로 실습</b> — 등기부, 토지이음, 실거래가를 아는 부동산에 대입</li>
+<li><b>숫자는 엑셀로</b> — 수익률·대출 계산은 손으로 한 번, 엑셀로 한 번</li>
+<li><b>질문 노트</b> — 모르는 것을 적어 두었다가 첫 수업에서 질문</li>
+</ol>
+</div>
+<div class="col">
+<div class="chip"><h3>금요일 밤 30분</h3><p>다음날 3과목 지난 노트를 10분씩 훑기</p></div>
+<div class="chip"><h3>토요일 수업 중</h3><p>‘시험에’, ‘실무에서 자주’라는 말에 별표</p></div>
+<div class="chip"><h3>일요일 30분</h3><p>별표 부분만 한 장으로 요약, 평일엔 요약본만</p></div>
+<div class="chip"><h3>노트북·태블릿 지참</h3><p>국가법령정보센터 조문을 수업 중 바로 확인</p></div>
+</div>
+</div>
+<p class="foot">07</p>
+</section>
+<section id="terms1">
+<p class="eyebrow">03 · 공통 용어 ① 부동산 일반</p>
+<h2>모든 수업에 나오는 기본 단어</h2>
+<table>
+<tr><th style="width:330px">용어</th><th style="width:760px">뜻</th><th>한 줄 메모</th></tr>
+<tr><td class="k">부동산</td><td>토지와 그 정착물(민법 제99조)</td><td>건물은 토지와 별개의 부동산</td></tr>
+<tr><td class="k">자연적 특성</td><td>부동성·영속성·부증성·개별성</td><td>시험 단골, 파생 현상까지</td></tr>
+<tr><td class="k">인문적 특성</td><td>용도의 다양성·병합분할 가능성·위치의 가변성</td><td>개발·최유효이용의 출발</td></tr>
+<tr><td class="k">최유효이용</td><td>법적 허용·물리적 가능·경제적 타당·최대 수익</td><td>감정평가의 기준</td></tr>
+<tr><td class="k">필지 / 획지</td><td>지번 하나의 토지 / 가격수준이 비슷한 토지 묶음</td><td>등기·평가 단위 구분</td></tr>
+<tr><td class="k">전용 / 공급면적</td><td>세대 독점 면적 / 전용 + 주거공용</td><td>오피스텔은 계약면적 기준</td></tr>
+<tr><td class="k">건폐율 / 용적률</td><td>대지면적 대비 건축면적 / 연면적 비율</td><td>개발 수익성의 출발점</td></tr>
+<tr><td class="k">실거래가 / 공시가격</td><td>신고된 거래가격 / 정부 공표 가격</td><td>세금은 공시가격 기준</td></tr>
+<tr><td class="k">감정평가 3방식</td><td>원가방식·비교방식·수익방식</td><td>적산가·비준가·수익가</td></tr>
+</table>
+<p class="foot">08</p>
+</section>
+<section id="terms2" class="alt">
+<p class="eyebrow">03 · 공통 용어 ② 권리·거래</p>
+<h2>등기부와 계약서에서 만나는 단어</h2>
+<table>
+<tr><th style="width:360px">용어</th><th style="width:720px">뜻</th><th>한 줄 메모</th></tr>
+<tr><td class="k">물권 / 채권</td><td>물건을 직접 지배 / 사람에게 청구하는 권리</td><td>물권은 법률로만(물권법정주의)</td></tr>
+<tr><td class="k">용익물권</td><td>지상권·지역권·전세권</td><td>남의 땅을 ‘쓰는’ 권리</td></tr>
+<tr><td class="k">담보물권</td><td>유치권·질권·저당권</td><td>돈을 ‘받기 위한’ 권리</td></tr>
+<tr><td class="k">근저당</td><td>채권최고액까지 담보하는 저당</td><td>보통 대출액의 120–130%</td></tr>
+<tr><td class="k">가압류 / 가처분</td><td>금전채권 보전 / 특정물 인도청구 보전</td><td>등기부에 보이면 거래 주의</td></tr>
+<tr><td class="k">말소기준권리</td><td>경매 때 소멸 여부를 가르는 기준 권리</td><td>(근)저당·(가)압류 등</td></tr>
+<tr><td class="k">대항력</td><td>임차인이 제3자에게 임차를 주장하는 힘</td><td>인도 + 전입신고 다음날 0시</td></tr>
+<tr><td class="k">(최)우선변제권</td><td>확정일자 순서 변제 / 소액임차인 일정액 최우선</td><td>전세사기 예방 핵심</td></tr>
+<tr><td class="k">계약금 / 해약금</td><td>계약 시 지급 / 해제 시 포기·배액</td><td>민법 제565조</td></tr>
+</table>
+<p class="foot">09</p>
+</section>
+<section id="terms3">
+<p class="eyebrow">03 · 공통 용어 ③ 투자·금융</p>
+<h2>수익률과 대출을 말하는 단어</h2>
+<table>
+<tr><th style="width:330px">용어</th><th style="width:760px">뜻</th><th>한 줄 메모</th></tr>
+<tr><td class="k">LTV</td><td>담보가치 대비 대출 비율</td><td>부산(비규제) 70%</td></tr>
+<tr><td class="k">DTI / DSR</td><td>소득 대비 주담대 원리금 / 모든 대출 원리금</td><td>DSR이 현재 핵심 규제</td></tr>
+<tr><td class="k">스트레스 DSR</td><td>미래 금리 상승분을 가산해 DSR 계산</td><td>대출 한도가 줄어드는 이유</td></tr>
+<tr><td class="k">NOI</td><td>순운영소득 = 유효총소득 − 영업경비</td><td>이자·세금·감가상각 전</td></tr>
+<tr><td class="k">캡레이트</td><td>NOI ÷ 부동산 가격</td><td>수익형 부동산 비교 지표</td></tr>
+<tr><td class="k">레버리지</td><td>대출로 자기자본 수익률을 확대</td><td>금리 &gt; 수익률이면 역효과</td></tr>
+<tr><td class="k">NPV / IRR</td><td>순현재가치 / 내부수익률</td><td>투자 의사결정 핵심 기법</td></tr>
+<tr><td class="k">PF · 리츠 · NPL</td><td>사업 현금흐름 담보 대출 · 부동산투자회사 · 부실채권</td><td>개발·간접투자·경매 과목</td></tr>
+<tr><td class="k">전세가율</td><td>매매가 대비 전세가 비율</td><td>높을수록 깡통전세 위험</td></tr>
+</table>
+<p class="foot">10</p>
+</section>
+<section id="formulas" class="alt">
+<p class="eyebrow">03 · 꼭 알아야 할 금융 공식</p>
+<h2>공식 5개와 첫 계산 연습</h2>
+<div class="row">
+<div class="col" style="flex:1.1;gap:14px">
+<div class="chip"><p class="tag" style="color:var(--accent);font-weight:700">미래가치·현재가치</p><p class="formula">FV = PV × (1 + r)ⁿ  ·  PV = FV ÷ (1 + r)ⁿ</p></div>
+<div class="chip"><p class="tag" style="color:var(--accent);font-weight:700">캡레이트·수익가액</p><p class="formula">Cap rate = NOI ÷ 가격  ·  가치 = NOI ÷ 환원이율</p></div>
+<div class="chip"><p class="tag" style="color:var(--accent);font-weight:700">자기자본수익률</p><p class="formula">(NOI − 연간 이자) ÷ 자기자본</p></div>
+<div class="chip"><p class="tag" style="color:var(--accent);font-weight:700">원리금균등 월 납입액 (엑셀 PMT)</p><p class="formula">PMT = L × i(1+i)ⁿ ÷ ((1+i)ⁿ − 1)</p></div>
+<div class="chip"><p class="tag" style="color:var(--accent);font-weight:700">DSR</p><p class="formula">모든 대출 연간 원리금 ÷ 연소득 × 100</p></div>
+</div>
+<div class="col">
+<div class="callout" style="display:flex;flex-direction:column;gap:14px">
+<p class="tag">계산 연습 · 2억 원 오피스텔</p>
+<p>보증금 1,000만 원 · 월세 80만 원 · 연 경비 120만 원</p>
+<p>NOI = 960만 − 120만 = <b>840만 원</b></p>
+</div>
+<div class="cards">
+<div class="card"><p class="stat">4.2%</p><p>매매가 2억 원 기준 캡레이트</p></div>
+<div class="card"><p class="stat">4.4%</p><p>보증금 뺀 실투자금 1.9억 원 기준</p></div>
+</div>
+<p class="note" style="margin:0">두 숫자가 왜 다른지 설명할 수 있으면 합격입니다.</p>
+</div>
+</div>
+<p class="foot">11</p>
+</section>
+<section id="s-intro">
+<p class="eyebrow">04 · 부동산과자산경영의이해 (전공필수)</p>
+<h2>부동산학 전체를 한 학기에 훑는 지도 과목</h2>
+<p class="lead">마케팅·평가·중개·권리분석·입지·금융·관리·투자·정책·조세를 매주 하나씩 다룹니다. 여기서 만든 용어집이 4년 내내 쓰입니다.</p>
+<div class="grid4">
+<div class="card"><p class="tag">부동성</p><h3>옮길 수 없음</h3><p>지역시장·임장 활동, 외부효과</p></div>
+<div class="card"><p class="tag">영속성</p><h3>소멸하지 않음</h3><p>토지는 감가상각 없음, 장기투자·임대 가능</p></div>
+<div class="card"><p class="tag">부증성</p><h3>양을 늘릴 수 없음</h3><p>공급 비탄력, 지가 상승, 집약적 이용</p></div>
+<div class="card"><p class="tag">개별성</p><h3>같은 땅은 없음</h3><p>일물일가, 감정평가 필요, 비교 난해</p></div>
+</div>
+<p class="note">시험은 ‘부동성 때문에 생기는 현상’ 같은 비교형이 많습니다. 공인중개사 1차 부동산학개론과 범위가 가장 많이 겹칩니다.</p>
+<p class="foot">출처: 학과 교과목 개요 · 12</p>
+</section>
+<section id="s-map" class="alt">
+<p class="eyebrow">04 · 부동산과자산경영의이해 — 예습 핵심</p>
+<h2>부동산학의 세 갈래와 시장을 보는 모형</h2>
+<div class="cards" style="margin-bottom:32px">
+<div class="card"><p class="tag">결정분야</p><h3>투자·금융·개발·정책</h3><p>→ 투자론, 금융론, 토지개발실무</p></div>
+<div class="card"><p class="tag">결정지원분야</p><h3>감정평가·중개·권리분석·관리</h3><p>→ 권리분석, 마케팅, 시장분석</p></div>
+<div class="card"><p class="tag">기초분야</p><h3>법·경제·입지·조세 이론</h3><p>→ 공법, 민법, 입지선정론, 조세</p></div>
+</div>
+<div class="row">
+<div class="col">
+<div class="callout"><p class="tag">4사분면 모형 (DiPasquale-Wheaton)</p><p>금리 상승 → 캡레이트 상승 → 가격 하락 → 신규공급 감소 → 몇 년 뒤 임대료 상승</p></div>
+</div>
+<div class="col">
+<div class="callout"><p class="tag">부동산 경기변동</p><p>회복 → 호황 → 후퇴 → 불황. 회복기엔 과거 거래가가 하한, 후퇴기엔 상한이 됩니다.</p></div>
+</div>
+</div>
+<p class="foot">13</p>
+</section>
+<section id="s-theory">
+<p class="eyebrow">05 · 부동산학원론 (전공선택)</p>
+<h2>가격이 ‘왜’ 그렇게 정해지는가</h2>
+<p class="lead">공급은 건설 기간 때문에 단기에 비탄력적이라, 수요가 늘면 가격이 먼저 오릅니다. 금리 인상·DSR 강화는 수요곡선을 왼쪽으로 옮깁니다.</p>
+<table>
+<tr><th style="width:420px">지대이론</th><th style="width:240px">학자</th><th>핵심</th></tr>
+<tr><td class="k">차액지대설</td><td>리카르도</td><td>비옥도 차이가 지대를 만듦, 한계지는 지대 0</td></tr>
+<tr><td class="k">절대지대설</td><td>마르크스</td><td>토지 소유 자체가 지대 발생 원인</td></tr>
+<tr><td class="k">위치지대설</td><td>튜넨</td><td>도시까지 수송비 차이가 지대 차이, 동심원 입지</td></tr>
+<tr><td class="k">입찰지대설</td><td>알론소</td><td>도심에서 멀수록 낮아지는 입찰지대, 최고 용도가 낙찰</td></tr>
+<tr><td class="k">준지대 · 파레토지대</td><td>마샬 · 파레토</td><td>설비의 단기 초과수익 · 전용수입 초과분</td></tr>
+</table>
+<p class="note">도시공간구조: 동심원(버제스) · 선형(호이트) · 다핵심(해리스·울만). 부산은 서면·센텀·연산·사상의 다핵심 도시입니다.</p>
+<p class="foot">14</p>
+</section>
+<section id="s-civil">
+<p class="eyebrow">06 · 판례중심민법 · 부동산사법</p>
+<h2>계약은 무효인가, 취소할 수 있는가</h2>
+<p class="lead">판례는 ‘사실관계 → 쟁점 → 결론 → 이유’ 4줄로 요약하고, 갑·을·병을 화살표로 그리면 복잡한 사례도 풀립니다.</p>
+<table>
+<tr><th style="width:340px">의사표시 하자</th><th style="width:170px">조문</th><th style="width:420px">효과</th><th>부동산 예시</th></tr>
+<tr><td class="k">반사회적 법률행위</td><td>제103조</td><td>절대적 무효</td><td>이중매매에 제2매수인 적극 가담</td></tr>
+<tr><td class="k">불공정한 법률행위</td><td>제104조</td><td>무효</td><td>궁박·무경험을 이용한 헐값 매매</td></tr>
+<tr><td class="k">통정허위표시</td><td>제108조</td><td>무효, 선의 제3자에 대항 못함</td><td>강제집행을 피하려는 가짜 매매</td></tr>
+<tr><td class="k">착오</td><td>제109조</td><td>중요부분 착오는 취소 가능</td><td>토지 면적·지번 착각</td></tr>
+<tr><td class="k">사기·강박</td><td>제110조</td><td>취소 가능</td><td>개발 호재를 속인 기획부동산</td></tr>
+</table>
+<p class="foot">출처: 옛 학과 이수표(2학년 전공필수) · 15</p>
+</section>
+<section id="s-civil2" class="alt">
+<p class="eyebrow">06 · 판례중심민법 — 예습 핵심</p>
+<h2>물권변동, 계약금, 그리고 민사특별법</h2>
+<div class="cards" style="margin-bottom:28px">
+<div class="card"><p class="tag">제186조</p><h3>매매는 등기해야 효력</h3><p>법률행위로 인한 부동산 물권변동은 등기가 있어야 생깁니다.</p></div>
+<div class="card"><p class="tag">제187조</p><h3>등기 없이도 효력</h3><p>상속·판결·경매 등. 단, 처분하려면 등기가 필요합니다.</p></div>
+<div class="card"><p class="tag">제565조</p><h3>계약금 해제</h3><p>이행 착수(중도금) 전까지 매수인은 포기, 매도인은 배액.</p></div>
+</div>
+<table>
+<tr><th style="width:380px">민사특별법</th><th>핵심 내용</th></tr>
+<tr><td class="k">주택임대차보호법</td><td>인도 + 전입신고 다음 날 대항력, 확정일자로 우선변제권, 갱신요구권 1회, 증액 5% 상한</td></tr>
+<tr><td class="k">상가건물임대차보호법</td><td>사업자등록 다음 날 대항력, 갱신요구 최대 10년, 권리금 회수기회 보호</td></tr>
+<tr><td class="k">집합건물법 · 부동산실명법</td><td>전유·공용부분·대지사용권 · 명의신탁 약정과 물권변동 원칙적 무효</td></tr>
+</table>
+<p class="foot">소액임차인 최우선변제 금액은 국가법령정보센터의 주임법 시행령으로 확인 · 16</p>
+</section>
+<section id="s-public">
+<p class="eyebrow">07 · 부동산공법 (전공필수)</p>
+<h2>이 땅에 무엇을, 얼마나 높게 지을 수 있나</h2>
+<table>
+<tr><th style="width:400px">용도지역</th><th style="width:300px">건폐율 상한</th><th style="width:340px">용적률 범위</th><th>대표 건물</th></tr>
+<tr><td class="k">제1종전용주거</td><td class="n" style="text-align:left">50%</td><td class="n" style="text-align:left">50–100%</td><td>단독주택</td></tr>
+<tr><td class="k">제2종일반주거</td><td class="n" style="text-align:left">60%</td><td class="n" style="text-align:left">100–250%</td><td>중층 아파트</td></tr>
+<tr><td class="k">제3종일반주거</td><td class="n" style="text-align:left">50%</td><td class="n" style="text-align:left">100–300%</td><td>고층 아파트</td></tr>
+<tr><td class="k">준주거</td><td class="n" style="text-align:left">70%</td><td class="n" style="text-align:left">200–500%</td><td>주상복합·오피스텔</td></tr>
+<tr><td class="k">중심상업</td><td class="n" style="text-align:left">90%</td><td class="n" style="text-align:left">200–1,500%</td><td>도심 업무시설</td></tr>
+<tr><td class="k">일반상업</td><td class="n" style="text-align:left">80%</td><td class="n" style="text-align:left">200–1,300%</td><td>상가·오피스</td></tr>
+<tr><td class="k">준공업</td><td class="n" style="text-align:left">70%</td><td class="n" style="text-align:left">150–400%</td><td>지식산업센터</td></tr>
+<tr><td class="k">자연녹지</td><td class="n" style="text-align:left">20%</td><td class="n" style="text-align:left">50–100%</td><td>창고·전원주택</td></tr>
+</table>
+<p class="note">국토계획법 시행령 상한입니다. 실제 적용치는 부산광역시 도시계획 조례가 정하므로 더 낮을 수 있습니다.</p>
+<p class="foot">국토계획법·도시개발법·도시정비법·건축법·주택법·농지법 · 공인중개사 2차 ‘부동산공법’과 범위가 거의 같음 · 17</p>
+</section>
+<section id="s-public2" class="alt">
+<p class="eyebrow">07 · 부동산공법 — 예습 핵심</p>
+<h2>계산 한 번, 정비사업 절차 한 번</h2>
+<p class="lead">계획 체계: 광역도시계획 → 도시·군기본계획(구속력 없음) → 도시·군관리계획(국민을 구속). 땅의 운명은 관리계획이 정합니다.</p>
+<div class="row">
+<div class="col" style="flex:0.9">
+<div class="callout"><p class="tag">대지 1,000㎡ · 건폐율 60% · 용적률 200%</p></div>
+<div class="cards">
+<div class="card"><p class="stat">600㎡</p><p>1층 바닥 최대</p></div>
+<div class="card"><p class="stat">2,000㎡</p><p>지상 연면적 최대</p></div>
+</div>
+<p class="note" style="margin:0">매 층 600㎡이면 약 3.3층. 층을 높이려면 바닥을 줄여야 합니다.</p>
+</div>
+<div class="col">
+<div class="grid2" style="gap:12px">
+<div class="chip"><h3>1 · 정비기본계획</h3></div>
+<div class="chip"><h3>5 · 사업시행계획인가</h3></div>
+<div class="chip"><h3>2 · 정비구역 지정</h3></div>
+<div class="chip"><h3>6 · 관리처분계획인가</h3></div>
+<div class="chip"><h3>3 · 추진위원회 구성</h3></div>
+<div class="chip"><h3>7 · 이주·철거·착공</h3></div>
+<div class="chip"><h3>4 · 조합설립인가</h3></div>
+<div class="chip"><h3>8 · 준공·이전고시·청산</h3></div>
+</div>
+<p class="note" style="margin:0">분담금 = 조합원 분양가 − 권리가액(종전자산평가액 × 비례율)</p>
+</div>
+</div>
+<p class="foot">18</p>
+</section>
+<section id="s-rights">
+<p class="eyebrow">08 · 부동산권리분석 (전공필수)</p>
+<h2>서류를 읽고 ‘사도 안전한가’ 판단하기</h2>
+<div class="cards" style="margin-bottom:28px">
+<div class="card"><p class="tag">표제부</p><h3>물건의 정체</h3><p>소재지·면적·구조·용도. 실제 물건과 일치하는지</p></div>
+<div class="card"><p class="tag">갑구</p><h3>소유권과 그 제한</h3><p>가압류·가처분·압류·경매개시결정·가등기</p></div>
+<div class="card"><p class="tag">을구</p><h3>소유권 외 권리</h3><p>근저당·전세권·지상권. 채권최고액 합계 확인</p></div>
+</div>
+<div class="callout" style="margin-bottom:24px"><p class="tag">말소기준권리</p><p>(근)저당·(가)압류·담보가등기·경매개시결정 중 가장 먼저 설정된 것. 그보다 앞선 용익권·임차권은 매수인이 인수, 뒤는 소멸합니다.</p></div>
+<div class="grid3" style="gap:12px">
+<div class="chip"><h3>유치권</h3></div>
+<div class="chip"><h3>법정지상권</h3></div>
+<div class="chip"><h3>분묘기지권</h3></div>
+<div class="chip"><h3>대항력 있는 임차인</h3></div>
+<div class="chip"><h3>위반건축물</h3></div>
+<div class="chip"><h3>토지거래허가·공법 제한</h3></div>
+</div>
+<p class="foot">마지막 줄 6가지는 서류에 나오지 않는 위험 — 시험과 실무에서 가장 중요 · 19</p>
+</section>
+<section id="s-income">
+<p class="eyebrow">09 · 수익형부동산투자실무 (전공필수)</p>
+<h2>표면 수익률이 아닌 실제 수익률</h2>
+<div class="row">
+<div class="col" style="flex:1.25">
+<table>
+<tr><th>가상의 상가 · 매매가 5억 원</th><th style="width:220px;text-align:right">만 원</th></tr>
+<tr><td>연 임대료 (월세 250 × 12)</td><td class="n">3,000</td></tr>
+<tr><td>공실·대손 5% 차감</td><td class="n">2,850</td></tr>
+<tr><td>영업경비 (재산세·보험·수선)</td><td class="n">−300</td></tr>
+<tr><td class="k">NOI</td><td class="n hl">2,550</td></tr>
+<tr><td>취득비용 (취득세 4.6% + 중개·법무)</td><td class="n">2,850</td></tr>
+<tr><td>자기자본 (보증금 5천·대출 2억 차감)</td><td class="n">27,850</td></tr>
+<tr><td>연 이자 (2억 × 4.5%)</td><td class="n">900</td></tr>
+<tr><td class="k">세전현금흐름</td><td class="n hl">1,650</td></tr>
+</table>
+</div>
+<div class="col">
+<div class="cards">
+<div class="card"><p class="stat">5.1%</p><p>캡레이트</p></div>
+<div class="card"><p class="stat">5.9%</p><p>자기자본수익률</p></div>
+</div>
+<div class="callout"><p class="tag">민감도 분석</p><p>금리 6% → 약 4.8%<br>공실률 20% → 약 4.3%</p></div>
+<p class="note" style="margin:0">변수를 하나씩 바꿔 보는 계산표를 엑셀 템플릿으로 만들어 두면 평생 씁니다.</p>
+</div>
+</div>
+<p class="foot">20</p>
+</section>
+<section id="s-income2" class="alt">
+<p class="eyebrow">09 · 수익형부동산투자실무 — 예습 핵심</p>
+<h2>유형별 리스크와 레버리지 판단</h2>
+<table>
+<tr><th style="width:300px">유형</th><th style="width:420px">수익 구조</th><th style="width:480px">주요 리스크</th><th>체크포인트</th></tr>
+<tr><td class="k">오피스텔</td><td>월세 중심, 소액 투자</td><td>공급 과잉, 주거용이면 주택 수 포함</td><td>역세권, 신규 공급량</td></tr>
+<tr><td class="k">상가</td><td>장기 임대, 권리금</td><td>공실, 온라인 소비 확대</td><td>유동인구, 1층 여부</td></tr>
+<tr><td class="k">다가구·꼬마빌딩</td><td>여러 임차인, 토지가치</td><td>관리 부담, 노후화</td><td>대지 지분, 도로 조건</td></tr>
+<tr><td class="k">지식산업센터</td><td>업무용 임대</td><td>입주 업종 제한, 대량 공급</td><td>산업단지 수요, 교통</td></tr>
+</table>
+<div class="cards" style="margin-top:32px">
+<div class="card"><p class="tag">정의 레버리지</p><p>캡레이트(5.1%) &gt; 대출금리(4.5%)일 때만 대출이 수익률을 끌어올립니다.</p></div>
+<div class="card"><p class="tag">대출 심사 지표</p><p>RTI = 연 임대소득 ÷ 연 이자. 통상 주택 1.25배, 비주택 1.5배 이상.</p></div>
+<div class="card"><p class="tag">세금 함정</p><p>상가 건물분 부가세 10%. 주거용 오피스텔은 주택 수에 포함될 수 있음.</p></div>
+</div>
+<p class="foot">21</p>
+</section>
+<section id="s-rental">
+<p class="eyebrow">10 · 주택임대사업의이해 (전공필수)</p>
+<h2>제도가 자주 바뀌니, 최신 규정 찾는 법부터</h2>
+<p class="lead">민간임대는 「민간임대주택에 관한 특별법」, 공공임대는 「공공주택 특별법」이 규율합니다. 옛 「임대주택법」은 2015년에 둘로 나뉘었습니다.</p>
+<div class="cards">
+<div class="card"><p class="tag">등록 절차</p><h3>3단계</h3><p>시·군·구청 임대사업자 등록 → 세무서 사업자등록 → 임대차계약 신고</p></div>
+<div class="card"><p class="tag">임대사업자 의무</p><h3>위반 시 과태료</h3><p>의무임대기간, 임대료 증액 5% 이내, 보증금 보증 가입, 표준계약서</p></div>
+<div class="card"><p class="tag">공공임대 유형</p><h3>누가·얼마나·얼마에</h3><p>영구·국민임대, 행복주택, 통합공공임대, 장기전세, 분양전환</p></div>
+</div>
+<div class="callout" style="margin-top:28px"><p class="tag">전세의 월세화</p><p>전세사기와 금리 상승 이후 월세 비중이 커지고 있습니다. 전월세 전환율(기준금리 + 가산율)로 환산하는 법을 꼭 익히세요.</p></div>
+<p class="foot">확인처: 렌트홈 · 마이홈 · 국가법령정보센터 · 22</p>
+</section>
+<section id="s-land" class="alt">
+<p class="eyebrow">11 · 토지개발실무 (전공필수)</p>
+<h2>규제를 돈의 언어로 바꾸는 과목</h2>
+<div class="row">
+<div class="col" style="flex:1.1">
+<table>
+<tr><th style="width:230px">땅 볼 때 7가지</th><th>확인 내용</th></tr>
+<tr><td class="k">지목</td><td>28개 지목 중 무엇인가 (대·전·답·임야)</td></tr>
+<tr><td class="k">용도지역</td><td>지을 수 있는 건물, 건폐율·용적률</td></tr>
+<tr><td class="k">도로</td><td>건축법상 도로에 2m 이상 접하는가</td></tr>
+<tr><td class="k">형상·경사</td><td>부정형·급경사는 개발비 증가</td></tr>
+<tr><td class="k">기반시설</td><td>상하수도·전기·가스 인입 가능</td></tr>
+<tr><td class="k">계획·호재</td><td>도시기본계획, 도로·철도 계획</td></tr>
+<tr><td class="k">가격</td><td>공시지가와 주변 실거래가</td></tr>
+</table>
+</div>
+<div class="col">
+<div class="callout"><p class="tag">개발 수지분석 (가상 예시)</p><p>토지 10억 + 건축 15억 + 간접비 5억 = 총사업비 30억 → 34억에 매각</p></div>
+<div class="cards">
+<div class="card"><p class="stat">4억</p><p>개발이익</p></div>
+<div class="card"><p class="stat">13%</p><p>사업비 대비</p></div>
+</div>
+<p class="note" style="margin:0">2026년 8월 건설공사비지수는 전년 대비 6.0% 상승. 공사비 6%만 올라도 이익의 약 4분의 1이 사라집니다.</p>
+</div>
+</div>
+<p class="foot">출처: 학과 교과목 개요, 비즈워치 · 23</p>
+</section>
+<section id="s-invest">
+<p class="eyebrow">12 · 부동산투자론 (전공선택)</p>
+<h2>‘살지 말지’를 숫자로 결정하는 법</h2>
+<p class="lead">기대수익률이 요구수익률(무위험률 + 위험할증률)보다 크면 투자합니다. 분산투자로 비체계적 위험은 줄지만 금리·경기 위험은 남습니다.</p>
+<div class="row">
+<div class="col" style="flex:1.2">
+<table>
+<tr><th style="width:250px">기법</th><th style="width:250px">투자 기준</th><th>한계</th></tr>
+<tr><td class="k">NPV</td><td>NPV ≥ 0</td><td>할인율 선택에 민감</td></tr>
+<tr><td class="k">IRR</td><td>IRR ≥ 요구수익률</td><td>복수 IRR 문제</td></tr>
+<tr><td class="k">수익성지수</td><td>PI ≥ 1</td><td>규모 무시</td></tr>
+<tr><td class="k">회수기간법</td><td>기준 기간 이내</td><td>시간가치 무시</td></tr>
+</table>
+</div>
+<div class="col">
+<div class="callout"><p class="tag">예시 · 10억 투자, 5년간 NOI 5천만, 5년 뒤 11억 매각</p></div>
+<div class="cards">
+<div class="card"><p class="stat" style="font-size:52px">+3,300만</p><p>NPV (할인율 6%)</p></div>
+<div class="card"><p class="stat">6.7%</p><p>IRR</p></div>
+</div>
+</div>
+</div>
+<p class="foot">24</p>
+</section>
+<section id="s-finance" class="alt">
+<p class="eyebrow">12 · 부동산금융론 (전공선택)</p>
+<h2>그 돈을 어떻게 구할 것인가</h2>
+<table>
+<tr><th style="width:300px">3억 · 30년 · 연 4%</th><th style="width:420px">첫 달 납입액</th><th>특징</th></tr>
+<tr><td class="k">원리금균등</td><td>약 143만 원 (매달 동일)</td><td>예산 관리 쉬움, 총이자는 원금균등보다 큼</td></tr>
+<tr><td class="k">원금균등</td><td>약 183만 원 (점점 감소)</td><td>초기 부담 크고 총이자 가장 적음</td></tr>
+<tr><td class="k">체증식</td><td>가장 적음 (점점 증가)</td><td>소득이 늘 청년층에 유리, 총이자 가장 큼</td></tr>
+<tr><td class="k">만기일시</td><td>이자만 100만 원</td><td>만기에 원금 전액, 수익형·사업자 대출</td></tr>
+</table>
+<div class="cards" style="margin-top:32px">
+<div class="card"><p class="tag">고정 vs 변동</p><p>변동금리는 금리 상승 위험을 차입자가 집니다. 그래서 보통 고정금리가 더 높습니다.</p></div>
+<div class="card"><p class="tag">PF</p><p>시행사·시공사·대주·신탁사의 역할, 책임준공·연대보증이 왜 문제인지 알아 두세요.</p></div>
+<div class="card"><p class="tag">엑셀 실습</p><p class="formula" style="font-size:24px">=PMT(4%/12,360,-300000000)</p></div>
+</div>
+<p class="foot">25</p>
+</section>
+<section id="s-location">
+<p class="eyebrow">13 · 부동산입지선정론 (전공선택)</p>
+<h2>용도에 맞는 자리를 고르는 이론</h2>
+<table>
+<tr><th style="width:320px">이론</th><th style="width:240px">학자</th><th style="width:740px">핵심</th><th>쓰임</th></tr>
+<tr><td class="k">최소비용이론</td><td>베버</td><td>운송비·노동비·집적이익으로 공장 입지 결정</td><td>공업 입지</td></tr>
+<tr><td class="k">중심지이론</td><td>크리스탈러</td><td>최소요구범위가 재화 도달범위 안에 있어야 유지</td><td>도시 계층</td></tr>
+<tr><td class="k">소매인력법칙</td><td>레일리</td><td>인구에 비례, 거리 제곱에 반비례해 고객 흡인</td><td>광역 상권</td></tr>
+<tr><td class="k">분기점모형</td><td>컨버스</td><td>두 도시 상권의 경계점 계산</td><td>상권 경계</td></tr>
+<tr><td class="k">확률모형</td><td>허프</td><td>매장 규모·거리·마찰계수로 방문 확률 계산</td><td>대형 매장</td></tr>
+<tr><td class="k">소매입지이론</td><td>넬슨</td><td>상권 잠재력·접근성·양립성 등 8원칙</td><td>점포 입지</td></tr>
+</table>
+<p class="note">이론은 오래됐지만 질문은 요즘 것입니다. ‘허프 모형으로 서면 상권과 센텀 상권을 비교하면?’처럼 부산 사례로 바꿔 보세요.</p>
+<p class="foot">26</p>
+</section>
+<section id="s-market" class="alt">
+<p class="eyebrow">13 · 부동산시장분석 (전공선택)</p>
+<h2>그 자리의 수요·공급을 숫자로 확인</h2>
+<div class="steps" style="margin-bottom:32px">
+<div class="step"><p class="n">1</p><p>지역분석</p></div>
+<div class="step"><p class="n">2</p><p>근린분석</p></div>
+<div class="step"><p class="n">3</p><p>부지분석</p></div>
+<div class="step"><p class="n">4</p><p>수요·공급</p></div>
+<div class="step"><p class="n">5</p><p>흡수율·시장성</p></div>
+<div class="step"><p class="n">6</p><p>타당성</p></div>
+<div class="step"><p class="n">7</p><p>투자분석</p></div>
+</div>
+<div class="grid3" style="gap:16px;margin-bottom:28px">
+<div class="chip"><h3>인구·세대 수</h3><p>수요의 바탕 · KOSIS</p></div>
+<div class="chip"><h3>입주물량</h3><p>2–3년 뒤 공급 압력</p></div>
+<div class="chip"><h3>준공 후 미분양</h3><p>시장 체력 · 국토부</p></div>
+<div class="chip"><h3>거래량</h3><p>가격보다 먼저 움직임</p></div>
+<div class="chip"><h3>매매·전세지수</h3><p>방향과 속도 · 부동산원</p></div>
+<div class="chip"><h3>PIR·구입부담지수</h3><p>소득 대비 집값</p></div>
+</div>
+<div class="callout"><p>2026년 6월 첫째 주 부산은 보합이었지만 해운대 +0.07%, 동래 +0.05%. 같은 달 사상구는 HUG 미분양관리지역 지정 — 이 차이를 설명하는 것이 시장분석의 출발점입니다.</p></div>
+<p class="foot">출처: 메이저맵 학과정보, 브런치 분석 · 27</p>
+</section>
+<section id="s-auction">
+<p class="eyebrow">14 · 경매와 NPL 투자 (전공선택)</p>
+<h2>싸게 사기보다, 숨은 비용을 모두 더하기</h2>
+<p class="lead">권리분석을 실전에 쓰는 3학년 과목입니다. 임의경매(담보권)와 강제경매(판결 등)가 있고, 온비드 공매에는 인도명령 제도가 없습니다.</p>
+<div class="steps" style="margin-bottom:32px">
+<div class="step"><p class="n">1</p><p>경매신청·개시결정</p></div>
+<div class="step"><p class="n">2</p><p>배당요구종기·감정평가</p></div>
+<div class="step"><p class="n">3</p><p>매각기일 (보증금 10%)</p></div>
+<div class="step"><p class="n">4</p><p>유찰 시 20–30% 저감</p></div>
+<div class="step"><p class="n">5</p><p>대금납부 = 소유권 취득</p></div>
+<div class="step"><p class="n">6</p><p>배당 → 인도</p></div>
+</div>
+<div class="row">
+<div class="col" style="flex:1.4"><div class="callout"><p class="tag">실제 취득원가</p><p>낙찰가 + 인수금액 + 취득세 + 법무비 + 명도비 + 체납 관리비 + 수리비</p></div></div>
+<div class="col"><div class="card"><p class="tag">NPL</p><p>2016년 대부업법 개정 이후 금융기관 NPL은 등록 대부업자 등만 매입 가능</p></div></div>
+</div>
+<p class="foot">출처: 학과 교과목 개요, 부동산대학원 교과목 · 28</p>
+</section>
+<section id="s-tax" class="alt">
+<p class="eyebrow">15 · 부동산조세</p>
+<h2>사고, 갖고, 빌려주고, 팔 때마다 세금</h2>
+<table>
+<tr><th style="width:200px">단계</th><th style="width:640px">국세</th><th>지방세</th></tr>
+<tr><td class="k">취득</td><td>인지세, (상속·증여세), 부가가치세</td><td>취득세(+농특세·지방교육세), 등록면허세</td></tr>
+<tr><td class="k">보유</td><td>종합부동산세</td><td>재산세(+지방교육세·도시지역분)</td></tr>
+<tr><td class="k">임대</td><td>종합소득세, 부가가치세</td><td>지방소득세</td></tr>
+<tr><td class="k">양도</td><td>양도소득세</td><td>지방소득세(양도세의 10%)</td></tr>
+</table>
+<div class="grid4" style="margin-top:32px">
+<div class="card"><p class="stat">1–3%</p><p>1주택 유상취득 취득세. 상가·토지는 4.6%</p></div>
+<div class="card"><p class="stat">6월 1일</p><p>재산세·종부세 과세기준일. 잔금일 협상 포인트</p></div>
+<div class="card"><p class="stat">9억·12억</p><p>종부세 공제 기준 (1세대 1주택은 12억)</p></div>
+<div class="card"><p class="stat">12억</p><p>1세대 1주택 양도세 비과세 양도가액 한도</p></div>
+</div>
+<p class="foot">세법은 매년 바뀝니다 — 노트에 기준 연도를 적고 홈택스·위택스로 확인 · 29</p>
+</section>
+<section id="s-advanced">
+<p class="eyebrow">16 · 고학년 응용 과목</p>
+<h2>지금은 개념 지도만, 자료는 꾸준히</h2>
+<div class="grid2">
+<div class="card"><p class="tag">실전부동산마케팅연습</p><h3>STP와 4P를 분양 현장에</h3><p>부산 최근 분양 단지 2곳의 광고를 비교하고, 누구를 표적으로 했는지 추리해 보세요.</p></div>
+<div class="card"><p class="tag">글로벌부동산시장론</p><h3>환율·금리는 국경을 넘는다</h3><p>한·미 기준금리 차이와 원/달러 환율을 ECOS에서 찾아 두세요. 해외 취득은 외국환 신고 의무.</p></div>
+<div class="card"><p class="tag">부동산건설관리실무</p><h3>기획부터 준공·운영까지</h3><p>발주 방식과 공사비 구성. 공사비가 오르면 분양가·분담금·PF가 함께 흔들립니다.</p></div>
+<div class="card"><p class="tag">캡스톤디자인</p><h3>팀으로 실제 문제를 푼다</h3><p>문제 정의 → 현황 데이터 → 대안 2–3개 → 수지분석 → 추천안과 위험. 원도심 빈집, 대학가 원룸 공실 등.</p></div>
+</div>
+<p class="foot">30</p>
+</section>
+<section id="license">
+<p class="eyebrow">17 · 자격증 연계 전략</p>
+<h2>수업과 공인중개사를 함께 준비</h2>
+<table>
+<tr><th style="width:140px">차수</th><th style="width:720px">시험 과목</th><th>겹치는 학과 과목</th></tr>
+<tr><td class="k">1차</td><td>부동산학개론 (감정평가론 포함)</td><td>자산경영의이해, 원론, 투자론, 금융론</td></tr>
+<tr><td class="k">1차</td><td>민법 및 민사특별법</td><td>판례중심민법, 권리분석, 임대사업</td></tr>
+<tr><td class="k">2차</td><td>공인중개사법령 및 중개실무</td><td>권리분석, 경매와NPL투자</td></tr>
+<tr><td class="k">2차</td><td>부동산공법</td><td>부동산공법, 토지개발실무</td></tr>
+<tr><td class="k">2차</td><td>부동산공시법령 및 부동산세법</td><td>권리분석, 부동산조세</td></tr>
+</table>
+<div class="grid3" style="margin-top:32px">
+<div class="card"><p class="stat">2027.10.30</p><p>제38회 시험 예정일(10월 마지막 토요일). 큐넷 공고로 확정</p></div>
+<div class="card"><p class="stat">40 / 60</p><p>합격 기준: 매 과목 40점, 평균 60점 이상</p></div>
+<div class="card"><p class="stat">1학년 → 2학년</p><p>1학년에 1차, 2학년에 2차를 준비하는 경로가 효율적</p></div>
+</div>
+<p class="foot">출처: 공인중개사 응시 규칙, 카이르뉴스 · 31</p>
+</section>
+<section id="market" class="dark">
+<p class="eyebrow">18 · 2026년 시장 환경 (11월 기준)</p>
+<h2>금리 인상 · 대출 규제 유지 · 부산 매매 약세</h2>
+<div class="grid4" style="margin-bottom:32px">
+<div class="card"><p class="stat">3.00%</p><h3>기준금리</h3><p>7·8월 연속 인상 후 10월 22일 동결</p></div>
+<div class="card"><p class="stat">11.26</p><h3>올해 마지막 금통위</h3><p>전문가 11명 중 8명이 3.25% 인상 예상</p></div>
+<div class="card"><p class="stat">−0.01%</p><h3>부산 매매 (11월 2주)</h3><p>10월 1주부터 6주 연속 하락</p></div>
+<div class="card"><p class="stat">+0.05%</p><h3>부산 전세 (같은 기간)</h3><p>매매는 약하고 전세는 강한 흐름</p></div>
+</div>
+<div class="row">
+<div class="col"><div class="card"><p class="tag">대출 규제</p><p>LTV 규제지역 40%·비규제 70%, DSR 은행 40%·2금융 50%. 부산은 비규제지역이지만 실제 한도는 대부분 DSR이 정합니다.</p></div></div>
+<div class="col"><div class="card"><p class="tag">공사비 · 미분양</p><p>건설공사비지수 전년 대비 +6.0%(8월). 준공 후 미분양과 인구 감소로 비수도권 회복에는 시간이 더 필요하다는 전망.</p></div></div>
+</div>
+<p class="foot">출처: 연합뉴스·머니투데이·이코노미스트·정책브리핑·비즈워치 등 · 32</p>
+</section>
+<section id="questions" class="accent">
+<p class="eyebrow">18 · 수업 토론용 질문</p>
+<h2>첫 수업 전에 내 답을 적어 두세요</h2>
+<div class="col" style="gap:28px;margin-top:20px">
+<p class="statement">1. 부산에서 매매가는 내리는데 전세가는 오르는 이유를 수요·공급과 금리로 설명하면?</p>
+<p class="statement">2. 같은 부산인데 해운대와 사상의 흐름이 다른 이유는 입지 이론 중 무엇으로 설명되나?</p>
+<p class="statement">3. 기준금리가 3.25%로 오르면 상가 예시의 자기자본수익률은 어떻게 바뀔까?</p>
+</div>
+<p class="foot">33</p>
+</section>
+<section id="tools">
+<p class="eyebrow">19 · 학습 도구와 사이트</p>
+<h2>즐겨찾기 폴더 하나로 4년을 버틴다</h2>
+<div class="grid4" style="gap:16px">
+<div class="chip"><h3>국가법령정보센터</h3><p>법률·시행령·조례 원문</p></div>
+<div class="chip"><h3>대법원 종합법률정보</h3><p>판례 원문</p></div>
+<div class="chip"><h3>토지이음</h3><p>토지이용계획확인서</p></div>
+<div class="chip"><h3>인터넷등기소</h3><p>등기부 열람·발급</p></div>
+<div class="chip"><h3>정부24</h3><p>건축물대장·토지대장</p></div>
+<div class="chip"><h3>국토부 실거래가</h3><p>주택·토지·상업용</p></div>
+<div class="chip"><h3>부동산공시가격알리미</h3><p>공시지가·공시가격</p></div>
+<div class="chip"><h3>한국부동산원 R-ONE</h3><p>가격동향·임대동향</p></div>
+<div class="chip"><h3>KOSIS</h3><p>인구·가구·주택 통계</p></div>
+<div class="chip"><h3>법원경매정보 · 온비드</h3><p>경매·공매 물건</p></div>
+<div class="chip"><h3>홈택스 · 위택스</h3><p>양도세·취득세 모의계산</p></div>
+<div class="chip"><h3>렌트홈 · 마이홈</h3><p>등록임대·공공임대</p></div>
+</div>
+<div class="cards" style="margin-top:28px">
+<div class="card"><p class="tag">교재</p><p>입학 전엔 공인중개사 1차 기본서 2권(개론, 민법)이면 충분. 개강 후엔 교수 지정 교재 우선.</p></div>
+<div class="card"><p class="tag">엑셀</p><p>PV·FV·PMT·NPV·IRR로 상가·개발·투자 예시를 한 시트에 — 나만의 분석 템플릿.</p></div>
+</div>
+<p class="foot">34</p>
+</section>
+<section id="checklist" class="dark">
+<p class="eyebrow">20 · 입학 전 최종 체크리스트</p>
+<h2>2월 말, 이만큼이면 여유 있게 시작</h2>
+<div class="cards">
+<div class="card"><p class="tag">개념</p>
+<ul class="list" style="padding-left:28px">
+<li>토지 특성 4가지와 파생 현상</li>
+<li>물권·채권, 용익·담보물권 구분</li>
+<li>대항력·(최)우선변제권 요건</li>
+<li>NOI·캡레이트·자기자본수익률 계산</li>
+<li>LTV·DSR로 내 대출 한도 추정</li>
+</ul></div>
+<div class="card"><p class="tag">실습</p>
+<ul class="list" style="padding-left:28px">
+<li>등기부 1통 열람·해석</li>
+<li>토지이용계획확인서 1통 조회</li>
+<li>수익률 엑셀 템플릿 만들기</li>
+<li>매각물건명세서 1건 읽기</li>
+<li>관심 지역 1곳 임장</li>
+</ul></div>
+<div class="card"><p class="tag">준비물과 생활</p>
+<ul class="list" style="padding-left:28px">
+<li>노트북·과목별 노트 폴더</li>
+<li>사이트 즐겨찾기 저장</li>
+<li>토요일 9–18시 일정 조율</li>
+<li>과목별 질문 3개씩</li>
+<li>공인중개사 목표 연도 정하기</li>
+</ul></div>
+</div>
+<p class="foot">입학 후 받는 이수표와 강의계획서에 맞춰 과목 순서를 조정해 쓰세요 · 35</p>
+</section>
+</div></div>
+<div id="hud"><button id="prev" aria-label="이전 슬라이드">‹</button><span id="count"></span><button id="next" aria-label="다음 슬라이드">›</button><button id="fs" aria-label="전체 화면">⛶</button></div>
+<script>
+(function () {
+  var stage = document.getElementById('stage');
+  var slides = Array.prototype.slice.call(stage.children);
+  var count = document.getElementById('count');
+  var bar = document.getElementById('progress');
+  var i = 0;
+  function fit() {
+    var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    stage.style.transform = 'scale(' + s + ')';
+  }
+  function go(n, push) {
+    n = Math.max(0, Math.min(slides.length - 1, n));
+    slides[i].classList.remove('active');
+    i = n;
+    slides[i].classList.add('active');
+    count.textContent = (i + 1) + ' / ' + slides.length;
+    bar.style.width = ((i + 1) / slides.length * 100) + '%';
+    if (push !== false) history.replaceState(null, '', '#' + (i + 1));
+  }
+  function fromHash() {
+    var n = parseInt(location.hash.slice(1), 10);
+    return isNaN(n) ? 0 : n - 1;
+  }
+  document.addEventListener('keydown', function (e) {
+    if (['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'].indexOf(e.key) > -1) { e.preventDefault(); go(i + 1); }
+    else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].indexOf(e.key) > -1) { e.preventDefault(); go(i - 1); }
+    else if (e.key === 'Home') go(0);
+    else if (e.key === 'End') go(slides.length - 1);
+    else if (e.key === 'f' || e.key === 'F') toggleFs();
+  });
+  document.getElementById('viewport').addEventListener('click', function (e) {
+    if (e.target.closest('a')) return;
+    go(e.clientX > window.innerWidth / 2 ? i + 1 : i - 1);
+  });
+  var tx = null;
+  document.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (tx === null) return;
+    var dx = e.changedTouches[0].clientX - tx; tx = null;
+    if (Math.abs(dx) > 40) go(dx < 0 ? i + 1 : i - 1);
+  });
+  function toggleFs() {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen && document.documentElement.requestFullscreen();
+    else document.exitFullscreen && document.exitFullscreen();
+  }
+  document.getElementById('prev').onclick = function (e) { e.stopPropagation(); go(i - 1); };
+  document.getElementById('next').onclick = function (e) { e.stopPropagation(); go(i + 1); };
+  document.getElementById('fs').onclick = function (e) { e.stopPropagation(); toggleFs(); };
+  window.addEventListener('resize', fit);
+  window.addEventListener('hashchange', function () { go(fromHash(), false); });
+  fit();
+  slides[0].classList.add('active');
+  go(fromHash(), false);
+})();
+</script>
+</body>
+</html>
