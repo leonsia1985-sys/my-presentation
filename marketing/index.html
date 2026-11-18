@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>마케팅 원론 핵심 정리</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+<style>
+  html, body { margin: 0; height: 100%; background: #0f1720; overflow: hidden; }
+  #stage { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; transform-origin: 0 0; }
+  #stage > section { position: absolute; inset: 0; width: 1920px; height: 1080px; display: none; overflow: hidden; }
+  #stage > section.active { display: flex; }
+  #stage > section > aside { display: none; }
+  .pgn::after { content: none !important; }
+  #notes { position: fixed; left: 0; right: 0; bottom: 0; max-height: 30vh; overflow: auto; background: rgba(15,23,32,.94); color: #e8edf2; font: 16px/1.6 'Noto Sans KR', sans-serif; padding: 14px 24px; display: none; z-index: 10; }
+  #notes.on { display: block; }
+  #hud { position: fixed; right: 16px; bottom: 12px; font: 13px 'Noto Sans KR', sans-serif; color: #8a99a8; z-index: 11; user-select: none; }
+  #hud button { background: rgba(255,255,255,.08); color: #cfd8e1; border: 0; border-radius: 6px; padding: 6px 10px; margin-left: 4px; cursor: pointer; font: inherit; }
+  #hud button:hover { background: rgba(255,255,255,.18); }
+  @media print {
+    html, body { overflow: visible; height: auto; background: none; }
+    #hud, #notes { display: none !important; }
+    #stage { position: static; transform: none !important; width: auto; height: auto; }
+    #stage > section { position: relative; display: flex !important; page-break-after: always; }
+    .fragment { opacity: 1 !important; }
+    .in { animation: none !important; }
+  }
+  @page { size: 1920px 1080px; margin: 0; }
+</style>
+</head>
+<body>
+<div id="stage">
+
+<section id="cover" class="dark center">
+<div style="position:absolute;left:0;top:0;width:24px;height:1080px;background:#A84B25"></div>
+<p class="eyebrow in">PRINCIPLES OF MARKETING · 학습 가이드</p>
+<h1 class="in d1">마케팅 원론<br>핵심 정리</h1>
+<div class="in d2" style="width:160px;height:6px;background:#F0A868;margin:48px 0 40px"></div>
+<p class="lead in d2" style="margin:0 0 16px;font-size:36px">고객 가치 창출 → 고객 관계 구축 → 기업 가치 회수</p>
+<p class="in d3" style="font-size:26px;color:#9FB0C0">코틀러 『마케팅 원리』 체계 기준 · 1~12장 핵심 개념과 예상 문제</p>
+<aside>마케팅 원론 전체를 하나의 흐름으로 정리한 학습용 발표 자료입니다. 각 장이 이 흐름의 어느 단계인지 연결하며 보면 암기량이 크게 줄어듭니다.</aside>
+</section>
+
+<section id="structure">
+<p class="eyebrow">OVERVIEW</p>
+<h2>하나의 흐름으로 읽는 마케팅 원론</h2>
+<p class="lead">모든 장은 “가치 창출 → 관계 구축 → 가치 회수” 흐름의 한 단계입니다.</p>
+<table>
+<tr class="hd"><th style="width:20%">단계</th><th style="width:58%">핵심 질문</th><th style="width:22%">해당 장</th></tr>
+<tr><td>기초 이해</td><td>마케팅이란 무엇이고, 어떤 철학으로 접근하는가?</td><td>1장, 2장</td></tr>
+<tr class="band"><td>전략 수립</td><td>회사 전체 전략 속에서 마케팅은 어떤 역할을 하는가?</td><td>3장</td></tr>
+<tr><td>시장 이해</td><td>환경·고객·데이터를 어떻게 분석하는가?</td><td>4장, 5장, 6장</td></tr>
+<tr class="band"><td>고객 지향 전략</td><td>누구에게, 어떤 가치를 제안할 것인가?</td><td>7장 (STP)</td></tr>
+<tr><td>실행 수단</td><td>제품·가격·유통·촉진을 어떻게 설계하는가?</td><td>8~11장 (4P)</td></tr>
+<tr class="band"><td>확장 주제</td><td>디지털·글로벌·윤리 환경에서 무엇이 달라지는가?</td><td>12장</td></tr>
+<tr><td>정리·점검</td><td>무엇을 외우고 어떻게 적용하는가?</td><td>예상 문제, 요약</td></tr>
+</table>
+<div class="foot"><p class="label">개요 · 전체 구조</p><p class="pgn"></p></div>
+</section>
+
+<section id="roadmap" class="alt">
+<p class="eyebrow">STUDY PLAN</p>
+<h2>4주 학습 로드맵</h2>
+<div class="g4" style="margin-bottom:32px">
+<div class="card in"><p class="big">1주차</p><h3>개념 기초 · 1~3장</h3><p class="txt">마케팅 정의, 필요·욕구·수요, 5가지 관리 철학, BCG·앤소프 매트릭스</p></div>
+<div class="card in d1"><p class="big">2주차</p><h3>시장 분석 · 4~6장</h3><p class="txt">미시·거시 환경, 조사 절차, 구매의사결정 5단계, 관여도 유형</p></div>
+<div class="card rust in d2"><p class="big" style="color:#FBF6EE">3주차</p><h3>STP와 4P · 7~11장</h3><p class="txt">시험 비중이 가장 큰 구간. 세분화, 포지셔닝, PLC, 가격, 유통, 촉진</p></div>
+<div class="card in d3"><p class="big">4주차</p><h3>확장과 복습 · 12장</h3><p class="txt">디지털 마케팅을 보완하고, 예상 문제와 체크리스트로 빈 곳 메우기</p></div>
+</div>
+<h3>효과적인 공부 방법</h3>
+<div class="g4">
+<p class="note">대비 쌍으로 외우기<br>판매 vs 마케팅, 푸시 vs 풀</p>
+<p class="note">실제 브랜드에 대입하기<br>스타벅스, 삼성전자, 쿠팡</p>
+<p class="note">빈 종이에 그려 보기<br>BCG, PLC 곡선, 구매 과정</p>
+<p class="note">‘시험 포인트’ 먼저 보기<br>무엇에 집중할지 파악</p>
+</div>
+<div class="foot"><p class="label">개요 · 학습 로드맵</p><p class="pgn"></p></div>
+</section>
+
+<section id="definition">
+<p class="eyebrow">1장 · 마케팅의 정의</p>
+<h2>마케팅은 ‘파는 기술’이 아니라 가치의 교환이다</h2>
+<div class="g3" style="margin-bottom:36px">
+<div class="card in"><p class="en">KOTLER &amp; ARMSTRONG</p><h3>코틀러</h3><p class="txt">고객을 위해 가치를 창출하고 강력한 고객 관계를 구축하여, 그 대가로 고객으로부터 가치를 획득하는 과정</p></div>
+<div class="card in d1"><p class="en">AMA, 2017</p><h3>미국마케팅협회</h3><p class="txt">고객, 파트너, 사회 전체에 가치 있는 제공물을 창출·전달·교환하는 활동과 프로세스. 사회적 책임을 강조</p></div>
+<div class="card in d2"><p class="en">PETER DRUCKER</p><h3>피터 드러커</h3><p class="txt">마케팅의 목적은 판매를 불필요하게 만드는 것. 고객을 잘 이해해 제품이 저절로 팔리게 함</p></div>
+</div>
+<h3>마케팅 프로세스 5단계</h3>
+<div class="row" style="gap:16px;margin-top:8px">
+<p class="step grow">① 시장과<br>고객 이해</p><p class="arrow">→</p>
+<p class="step grow">② 고객 지향<br>전략 (STP)</p><p class="arrow">→</p>
+<p class="step grow">③ 통합 프로그램<br>(4P)</p><p class="arrow">→</p>
+<p class="step grow">④ 고객 관계<br>구축 (CRM)</p><p class="arrow">→</p>
+<p class="step grow" style="background:#A84B25">⑤ 고객으로부터<br>가치 회수</p>
+</div>
+<div class="foot"><p class="label">1장 · 마케팅의 정의와 핵심 개념</p><p class="pgn"></p></div>
+<aside>세 정의의 공통 키워드는 가치, 교환, 관계입니다. 1~4단계는 고객을 위한 가치 창출, 5단계는 그 결과 기업이 돌려받는 가치입니다.</aside>
+</section>
+
+<section id="needs">
+<p class="eyebrow">1장 · 핵심 개념</p>
+<h2>필요 · 욕구 · 수요</h2>
+<div class="g3" style="margin-bottom:32px">
+<div class="card in"><p class="en">NEEDS</p><h3>필요</h3><p class="txt">기본적인 결핍 상태. 인간에게 본래 존재하며 마케터가 만들 수 없음</p><p class="txt" style="margin-top:12px;color:#1B2A3A"><b>예:</b> 배고픔, 목마름, 소속감</p></div>
+<div class="card in d1"><p class="en">WANTS</p><h3>욕구</h3><p class="txt">문화와 개인 성향에 따라 구체화된 필요의 형태</p><p class="txt" style="margin-top:12px;color:#1B2A3A"><b>예:</b> 한국인은 밥, 미국인은 햄버거</p></div>
+<div class="card in d2"><p class="en">DEMANDS</p><h3>수요</h3><p class="txt">구매력이 뒷받침된 욕구</p><p class="txt" style="margin-top:12px;color:#1B2A3A"><b>예:</b> 포르쉐를 원하고 살 돈도 있음</p></div>
+</div>
+<div class="g2">
+<p class="note"><b>시험 함정:</b> 마케터는 필요를 만들 수 없지만, 욕구에 영향을 주고 수요를 자극할 수는 있습니다. “마케팅은 필요를 창출한다”는 틀린 진술입니다.</p>
+<div class="card navy"><h3>마케팅 근시안 (Levitt)</h3><p class="txt">고객의 근본적 필요보다 제품 자체에 집착하는 실수. “고객은 드릴이 아니라 6mm 구멍을 원한다.” 철도회사가 자신을 운송업이 아닌 철도업으로 정의한 사례</p></div>
+</div>
+<div class="foot"><p class="label">1장 · 마케팅의 정의와 핵심 개념</p><p class="pgn"></p></div>
+</section>
+
+<section id="satisfaction">
+<p class="eyebrow">1장 · 고객 가치와 관계</p>
+<h2>고객 만족과 고객 관계 관리</h2>
+<div class="row" style="gap:40px">
+<div class="col" style="width:760px">
+<div class="card"><h3>고객 만족 = 지각된 성과 − 기대</h3>
+<p class="txt">성과 &lt; 기대 → <b>불만족</b><br>성과 = 기대 → <b>만족</b><br>성과 &gt; 기대 → <b>감동 (Delight)</b></p>
+<p class="txt" style="margin-top:10px">원칙: 적게 약속하고 많이 제공하라</p></div>
+<div class="card sand"><h3>꼭 구분할 세 지표</h3>
+<p class="txt"><b>고객생애가치(CLV)</b> 한 고객이 가져다주는 미래 이익의 현재가치 합<br><b>고객 점유율</b> 한 고객의 범주 지출 중 자사 비중<br><b>고객 자산</b> 전체 고객 CLV의 합</p></div>
+</div>
+<div class="col grow" style="gap:12px">
+<p class="axis">고객 관계 4유형 · 수익성 × 충성 기간</p>
+<div class="g2" style="gap:16px">
+<div class="card teal"><h3>진정한 친구</h3><p class="txt">수익성 높음 · 장기<br>지속적 관계 투자</p></div>
+<div class="card rust"><h3>나비</h3><p class="txt">수익성 높음 · 단기<br>거래할 때 최대 회수</p></div>
+<div class="card"><h3>따개비</h3><p class="txt">수익성 낮음 · 장기<br>수익성 개선, 안 되면 정리</p></div>
+<div class="card"><h3>낯선 사람</h3><p class="txt">수익성 낮음 · 단기<br>투자하지 않음</p></div>
+</div>
+</div>
+</div>
+<div class="foot"><p class="label">1장 · 마케팅의 정의와 핵심 개념</p><p class="pgn"></p></div>
+</section>
+
+<section id="philosophies" class="alt">
+<p class="eyebrow">2장 · 마케팅 관리 철학</p>
+<h2>“만들면 팔린다”에서 “사회까지 챙겨야 팔린다”로</h2>
+<table>
+<tr class="hd"><th style="width:18%">개념</th><th style="width:38%">핵심 가정</th><th style="width:24%">적합한 상황</th><th style="width:20%">한계</th></tr>
+<tr><td><b>① 생산 개념</b></td><td>싸고 쉽게 구할 수 있는 제품을 선호</td><td>수요 &gt; 공급</td><td>진짜 욕구 무시</td></tr>
+<tr class="band"><td><b>② 제품 개념</b></td><td>품질·성능·혁신이 뛰어난 제품을 선호</td><td>기술 중심 산업</td><td>마케팅 근시안</td></tr>
+<tr><td><b>③ 판매 개념</b></td><td>적극적 판촉 없이는 충분히 사지 않음</td><td>비탐색품, 공급 과잉</td><td>재구매 저조</td></tr>
+<tr class="band"><td><b>④ 마케팅 개념</b></td><td>표적 시장의 욕구를 경쟁자보다 잘 충족</td><td>대부분의 경쟁 시장</td><td>사회적 비용 간과</td></tr>
+<tr><td><b>⑤ 사회적 마케팅</b></td><td>소비자와 사회의 장기적 복지까지 고려</td><td>환경·건강 이슈 산업</td><td>단기 수익과 충돌</td></tr>
+</table>
+<p class="note" style="margin-top:32px">시험에서는 다섯 개념의 <b>순서</b>와 각 개념의 <b>핵심 가정·적용 상황</b>을 짝짓는 문제가 가장 많이 나옵니다.</p>
+<div class="foot"><p class="label">2장 · 마케팅 관리 철학의 변천</p><p class="pgn"></p></div>
+</section>
+
+<section id="selling-vs-marketing">
+<p class="eyebrow">2장 · 단골 비교 문제</p>
+<h2>판매 개념 vs 마케팅 개념</h2>
+<div class="row" style="gap:48px">
+<div style="width:900px">
+<table>
+<tr class="hd"><th style="width:24%">구분</th><th style="width:38%">판매 개념</th><th style="width:38%">마케팅 개념</th></tr>
+<tr><td>출발점</td><td>공장</td><td><b>시장</b></td></tr>
+<tr class="band"><td>초점</td><td>기존 제품</td><td><b>고객의 필요</b></td></tr>
+<tr><td>수단</td><td>판매와 촉진</td><td><b>통합적 마케팅</b></td></tr>
+<tr class="band"><td>목표</td><td>판매량을 통한 이익</td><td><b>고객 만족을 통한 이익</b></td></tr>
+<tr><td>방향</td><td>Inside-out</td><td><b>Outside-in</b></td></tr>
+</table>
+</div>
+<div class="col grow" style="gap:16px">
+<h3>사회적 마케팅 개념의 3요소</h3>
+<p class="step light">소비자의 욕구 충족</p>
+<p class="step light">기업의 이익</p>
+<p class="step">사회의 장기적 복지</p>
+<p class="note"><b>CSR vs CSV:</b> CSR은 이익의 일부를 환원, 포터의 CSV는 사회 문제 해결 자체를 사업 기회로 봅니다.</p>
+</div>
+</div>
+<div class="foot"><p class="label">2장 · 마케팅 관리 철학의 변천</p><p class="pgn"></p></div>
+</section>
+
+<section id="paradigm">
+<p class="eyebrow">2장 · 패러다임의 확장</p>
+<h2>마케팅 1.0 → 5.0</h2>
+<div class="g5" style="margin-bottom:44px">
+<div class="card in"><p class="big">1.0</p><h3>제품 중심</h3><p class="txt">대량생산, 기능적 가치</p></div>
+<div class="card in d1"><p class="big">2.0</p><h3>고객 중심</h3><p class="txt">STP, 차별화, 감성적 가치</p></div>
+<div class="card in d2"><p class="big">3.0</p><h3>인간 중심</h3><p class="txt">가치 주도, 사회적 책임</p></div>
+<div class="card in d3"><p class="big">4.0</p><h3>온·오프 통합</h3><p class="txt">디지털 연결, 5A 고객 경로</p></div>
+<div class="card navy in d4"><p class="big" style="color:#F0A868">5.0</p><h3>인간을 위한 기술</h3><p class="txt">AI, 빅데이터, 예측·맥락·증강</p></div>
+</div>
+<h3>마케팅 4.0의 5A 고객 경로</h3>
+<div class="row" style="gap:16px;margin:8px 0 28px">
+<p class="step grow">인지<br>Aware</p><p class="arrow">→</p>
+<p class="step grow">호감<br>Appeal</p><p class="arrow">→</p>
+<p class="step grow">문의<br>Ask</p><p class="arrow">→</p>
+<p class="step grow">행동<br>Act</p><p class="arrow">→</p>
+<p class="step grow" style="background:#A84B25">옹호<br>Advocate</p>
+</div>
+<p class="note">기존 AIDA와 달리 구매에서 끝나지 않고 <b>추천·옹호</b>까지 이어집니다.</p>
+<div class="foot"><p class="label">2장 · 마케팅 관리 철학의 변천</p><p class="pgn"></p></div>
+</section>
+
+<section id="bcg">
+<p class="eyebrow">3장 · 사업 포트폴리오</p>
+<h2>BCG 성장–점유 매트릭스</h2>
+<div class="row" style="gap:48px">
+<div class="row" style="gap:16px;width:1000px">
+<div class="col" style="width:80px;justify-content:space-between;padding:8px 0">
+<p class="axis">높음</p><p class="axis">성장률</p><p class="axis">낮음</p>
+</div>
+<div class="col grow" style="gap:12px">
+<div class="g2" style="gap:16px">
+<div class="card teal in"><p class="en">STAR</p><h3>별</h3><p class="txt">고성장 · 고점유<br>유지·육성, 투자 지속</p></div>
+<div class="card in d1"><p class="en">QUESTION MARK</p><h3>물음표</h3><p class="txt">고성장 · 저점유<br>선별 후 육성 또는 철수</p></div>
+<div class="card rust in d2"><p class="en">CASH COW</p><h3>현금젖소</h3><p class="txt">저성장 · 고점유<br>수확, 다른 사업에 자금 공급</p></div>
+<div class="card sand in d3"><p class="en" style="color:#4A5562">DOG</p><h3>개</h3><p class="txt">저성장 · 저점유<br>수확 또는 철수</p></div>
+</div>
+<div class="row" style="justify-content:space-between"><p class="axis">높음 ← 상대적 시장 점유율 → 낮음</p></div>
+</div>
+</div>
+<div class="col grow">
+<div class="card navy"><h3>이상적 이동 경로</h3><p class="txt">물음표 → 별 → 현금젖소<br>현금젖소의 자금으로 물음표와 별에 투자</p></div>
+<div class="card"><h3>상대적 점유율</h3><p class="txt">자사 점유율 ÷ 최대 경쟁자 점유율<br>1.0보다 크면 시장 선도자</p></div>
+<p class="note">한계: 두 변수만 고려, 시장 정의에 따라 결과가 바뀜, 사업 간 시너지 미반영 → 보완 모형이 <b>GE/맥킨지 3×3</b></p>
+</div>
+</div>
+<div class="foot"><p class="label">3장 · 전략적 계획과 마케팅</p><p class="pgn"></p></div>
+</section>
+
+<section id="ansoff-porter" class="alt">
+<p class="eyebrow">3장 · 성장과 경쟁 전략</p>
+<h2>앤소프 매트릭스와 포터의 본원적 전략</h2>
+<div class="row" style="gap:48px">
+<div class="col" style="width:900px;gap:12px">
+<div class="g2" style="gap:12px">
+<p class="axis">기존 제품</p><p class="axis">신규 제품</p>
+</div>
+<div class="g2" style="gap:16px">
+<div class="card teal"><h3>시장 침투</h3><p class="txt">기존 시장 · 위험 최저<br>멤버십 강화로 구매 빈도 증대</p></div>
+<div class="card"><h3>제품 개발</h3><p class="txt">기존 시장<br>기존 고객에게 신규 라인업</p></div>
+<div class="card"><h3>시장 개발</h3><p class="txt">신규 시장<br>국내 라면을 동남아에 수출</p></div>
+<div class="card rust"><h3>다각화</h3><p class="txt">신규 시장 · 위험 최고<br>전자회사의 바이오 진출</p></div>
+</div>
+</div>
+<div class="col grow">
+<h3>포터의 본원적 경쟁전략</h3>
+<div class="card"><h3>원가 우위</h3><p class="txt">업계 최저 원가로 가격 경쟁력 · 월마트, 이케아</p></div>
+<div class="card"><h3>차별화</h3><p class="txt">독특한 가치로 프리미엄 확보 · 애플, 다이슨</p></div>
+<div class="card"><h3>집중화</h3><p class="txt">특정 세분시장에 원가·차별화 집중</p></div>
+<p class="note">어중간한 위치(Stuck in the middle)는 수익성이 가장 낮습니다.</p>
+</div>
+</div>
+<div class="foot"><p class="label">3장 · 전략적 계획과 마케팅</p><p class="pgn"></p></div>
+</section>
+
+<section id="swot">
+<p class="eyebrow">3장 · 상황 분석</p>
+<h2>SWOT에서 전략으로: TOWS 매트릭스</h2>
+<p class="lead">내부 요인(강점·약점)과 외부 요인(기회·위협)을 조합해야 전략이 나옵니다.</p>
+<div class="g2" style="gap:20px;margin-bottom:28px">
+<div class="card teal in"><p class="en">SO · 강점 × 기회</p><h3>공격적 전략</h3><p class="txt">강점을 활용해 기회를 선점</p></div>
+<div class="card in d1"><p class="en">WO · 약점 × 기회</p><h3>전환 전략</h3><p class="txt">약점을 보완해 기회를 활용</p></div>
+<div class="card in d2"><p class="en">ST · 강점 × 위협</p><h3>다각화 전략</h3><p class="txt">강점으로 위협을 회피·극복</p></div>
+<div class="card rust in d3"><p class="en">WT · 약점 × 위협</p><h3>방어적 전략</h3><p class="txt">약점을 최소화하고 위협을 회피</p></div>
+</div>
+<p class="note"><b>가치사슬(포터):</b> 본원적 활동(물류·운영·마케팅·서비스)과 지원 활동으로 가치 창출 지점을 분석. <b>가치전달네트워크:</b> 오늘날 경쟁은 네트워크 간 경쟁입니다.</p>
+<div class="foot"><p class="label">3장 · 전략적 계획과 마케팅</p><p class="pgn"></p></div>
+</section>
+
+<section id="micro-env">
+<p class="eyebrow">4장 · 마케팅 환경</p>
+<h2>미시 환경과 경쟁의 네 수준</h2>
+<div class="g3" style="gap:16px;margin-bottom:32px">
+<div class="card"><h3>기업 내부</h3><p class="txt">모든 부서가 고객 관점에서 협력</p></div>
+<div class="card"><h3>공급업자</h3><p class="txt">공급 부족·가격 상승은 비용에 직결</p></div>
+<div class="card"><h3>마케팅 중간상</h3><p class="txt">유통·물류·대행사·금융 중개기관</p></div>
+<div class="card"><h3>경쟁자</h3><p class="txt">경쟁자보다 더 큰 가치를 제공해야 함</p></div>
+<div class="card"><h3>공중 (Publics)</h3><p class="txt">금융·언론·정부·시민단체 등 7유형</p></div>
+<div class="card navy"><h3>고객</h3><p class="txt">모든 마케팅 활동의 중심</p></div>
+</div>
+<h3>경쟁의 네 수준 · 좁은 범위 → 넓은 범위</h3>
+<div class="row" style="gap:12px;margin-top:8px">
+<p class="step grow">브랜드 경쟁<br><span style="color:#C9D3DC">코카콜라 vs 펩시</span></p><p class="arrow">→</p>
+<p class="step grow">제품군 경쟁<br><span style="color:#C9D3DC">콜라 vs 사이다</span></p><p class="arrow">→</p>
+<p class="step grow">본원적 경쟁<br><span style="color:#C9D3DC">음료 vs 커피 vs 물</span></p><p class="arrow">→</p>
+<p class="step grow" style="background:#A84B25">예산 경쟁<br><span style="color:#FBEDE2">음료 vs 영화 vs 게임</span></p>
+</div>
+<div class="foot"><p class="label">4장 · 마케팅 환경 분석</p><p class="pgn"></p></div>
+</section>
+
+<section id="macro-env" class="alt">
+<p class="eyebrow">4장 · 산업 구조와 거시 환경</p>
+<h2>포터의 5 Forces와 PEST</h2>
+<div class="row" style="gap:48px">
+<div class="col" style="width:760px;gap:16px">
+<div class="row" style="justify-content:center"><p class="step light" style="width:300px">신규 진입자의 위협</p></div>
+<div class="row" style="gap:16px">
+<p class="step light grow">공급자<br>교섭력</p>
+<p class="step grow" style="background:#A84B25;padding:36px 24px">기존 경쟁자 간<br>경쟁 강도</p>
+<p class="step light grow">구매자<br>교섭력</p>
+</div>
+<div class="row" style="justify-content:center"><p class="step light" style="width:300px">대체재의 위협</p></div>
+<p class="note">다섯 요인이 강할수록 산업 매력도는 낮아집니다. 진입 장벽: 규모의 경제, 자본, 브랜드 충성도, 규제</p>
+</div>
+<div class="grow">
+<table>
+<tr class="hd"><th style="width:30%">거시 환경</th><th style="width:70%">최근 사례</th></tr>
+<tr><td>인구통계적</td><td>저출생·고령화, 1인 가구, MZ·알파</td></tr>
+<tr class="band"><td>경제적</td><td>고물가 속 가성비·짠테크 소비</td></tr>
+<tr><td>자연적</td><td>ESG 경영, 탄소 중립, 재활용 포장</td></tr>
+<tr class="band"><td>기술적</td><td>생성형 AI, 퀵커머스</td></tr>
+<tr><td>정치·법적</td><td>개인정보·플랫폼 규제</td></tr>
+<tr class="band"><td>문화적</td><td>웰니스, 가치소비, 개인화</td></tr>
+</table>
+</div>
+</div>
+<div class="foot"><p class="label">4장 · 마케팅 환경 분석</p><p class="pgn"></p></div>
+</section>
+
+<section id="research">
+<p class="eyebrow">5장 · 마케팅 조사</p>
+<h2>마케팅 조사 절차와 자료의 종류</h2>
+<div class="row" style="gap:12px;margin-bottom:20px">
+<p class="step grow" style="background:#A84B25">① 문제 정의와<br>조사 목적 설정</p><p class="arrow">→</p>
+<p class="step grow">② 조사 계획<br>수립</p><p class="arrow">→</p>
+<p class="step grow">③ 조사 계획<br>실행</p><p class="arrow">→</p>
+<p class="step grow">④ 결과 해석과<br>보고</p>
+</div>
+<div class="g3" style="gap:16px;margin-bottom:32px">
+<div class="card sand"><h3>탐색적 조사</h3><p class="txt">문제 정의·가설 제시를 위한 예비 조사</p></div>
+<div class="card sand"><h3>기술적 조사</h3><p class="txt">시장 규모, 태도 등 현상을 기술</p></div>
+<div class="card sand"><h3>인과적 조사</h3><p class="txt">변수 간 인과관계 검증 (실험)</p></div>
+</div>
+<table>
+<tr class="hd"><th style="width:18%">구분</th><th style="width:41%">1차 자료</th><th style="width:41%">2차 자료</th></tr>
+<tr><td>정의</td><td>현재 목적을 위해 직접 수집</td><td>다른 목적으로 이미 수집된 자료</td></tr>
+<tr class="band"><td>예시</td><td>설문, 인터뷰, 관찰, 실험</td><td>통계청, 업계 보고서, 내부 자료</td></tr>
+<tr><td>비용·시간</td><td>많이 듦</td><td>적게 듦 → 조사는 보통 2차 자료로 시작</td></tr>
+</table>
+<div class="foot"><p class="label">5장 · 마케팅 정보와 마케팅 조사</p><p class="pgn"></p></div>
+</section>
+
+<section id="sampling">
+<p class="eyebrow">5장 · 표본과 측정</p>
+<h2>확률 표본 vs 비확률 표본</h2>
+<div class="g2" style="gap:40px;margin-bottom:24px">
+<div class="col" style="gap:12px">
+<p class="pill" style="background:#2F6F73">확률 표본</p>
+<div class="card" style="padding:18px 28px"><h3>단순 무작위 추출</h3><p class="txt">모든 구성원이 같은 확률로 선택</p></div>
+<div class="card" style="padding:18px 28px"><h3>층화 추출</h3><p class="txt">집단을 나눈 뒤 각 집단에서 <b>무작위</b> 추출</p></div>
+<div class="card" style="padding:18px 28px"><h3>군집(지역) 추출</h3><p class="txt">일부 군집을 무작위로 선택</p></div>
+</div>
+<div class="col" style="gap:12px">
+<p class="pill">비확률 표본</p>
+<div class="card" style="padding:18px 28px"><h3>편의 추출</h3><p class="txt">가장 쉽게 접근할 수 있는 사람을 선택</p></div>
+<div class="card" style="padding:18px 28px"><h3>판단 추출</h3><p class="txt">조사자 판단으로 적합한 사람을 선택</p></div>
+<div class="card" style="padding:18px 28px"><h3>할당 추출</h3><p class="txt">범주별 비율대로 채우되 <b>무작위가 아님</b></p></div>
+</div>
+</div>
+<p class="note"><b>함정:</b> 층화와 할당 모두 집단을 나누지만, 마지막 선택이 무작위인지가 다릅니다.</p>
+<div class="foot"><p class="label">5장 · 마케팅 정보와 마케팅 조사</p><p class="pgn"></p></div>
+<aside>측정의 품질도 함께 기억하세요. 신뢰성은 반복 측정 시 일관성, 타당성은 측정하려는 것을 제대로 측정하는 정도이며, 타당성이 높으려면 신뢰성이 전제되어야 합니다.</aside>
+</section>
+
+<section id="decision" class="alt">
+<p class="eyebrow">6장 · 소비자 행동</p>
+<h2>구매의사결정 과정 5단계</h2>
+<div class="g5" style="gap:16px;margin-bottom:32px">
+<div class="card in"><p class="big">01</p><h3>문제 인식</h3><p class="txt">현재와 바람직한 상태의 차이 인식. 내부·외부 자극</p></div>
+<div class="card in d1"><p class="big">02</p><h3>정보 탐색</h3><p class="txt">개인적·상업적·공공적·경험적 원천</p></div>
+<div class="card in d2"><p class="big">03</p><h3>대안 평가</h3><p class="txt">고려상표군 안에서 보완적·비보완적 방식으로 비교</p></div>
+<div class="card in d3"><p class="big">04</p><h3>구매 결정</h3><p class="txt">타인의 태도와 예상치 못한 상황 요인이 개입</p></div>
+<div class="card navy in d4"><p class="big" style="color:#F0A868">05</p><h3>구매 후 행동</h3><p class="txt">만족·불만족, 인지부조화, 재구매, 구전·리뷰</p></div>
+</div>
+<div class="g2">
+<p class="note"><b>구매 후 인지부조화</b>는 고가품일수록 큽니다. 기업은 구매 후 안내, 보증, 감사 메시지로 이를 줄입니다.</p>
+<p class="note">상업적 원천은 <b>알려주는</b> 역할, 개인적 원천은 <b>평가하는</b> 역할. 일상적 구매는 일부 단계를 건너뜁니다.</p>
+</div>
+<div class="foot"><p class="label">6장 · 소비자 행동과 B2B 구매행동</p><p class="pgn"></p></div>
+</section>
+
+<section id="buying-types">
+<p class="eyebrow">6장 · 어셈의 분류</p>
+<h2>구매행동의 네 유형: 관여도 × 브랜드 간 차이</h2>
+<div class="row" style="gap:16px">
+<div class="col" style="width:150px;gap:16px">
+<div class="grow" style="display:flex;align-items:center"><p class="axis">고관여</p></div>
+<div class="grow" style="display:flex;align-items:center"><p class="axis">저관여</p></div>
+</div>
+<div class="col grow" style="gap:12px">
+<div class="g2" style="gap:16px"><p class="axis">브랜드 간 차이 큼</p><p class="axis">브랜드 간 차이 작음</p></div>
+<div class="g2" style="gap:16px">
+<div class="card navy"><h3>복잡한 구매행동</h3><p class="txt">자동차, 노트북. 신념·태도 형성 후 신중히 선택<br><b>전략:</b> 제품 속성 교육, 상세 정보</p></div>
+<div class="card"><h3>부조화 감소 구매행동</h3><p class="txt">카펫, 냉장고. 빨리 사고 나서 불편함<br><b>전략:</b> 구매 후 확신을 주는 메시지</p></div>
+<div class="card rust"><h3>다양성 추구 구매행동</h3><p class="txt">과자, 아이스크림. 싫증 나서 브랜드 전환<br><b>전략:</b> 선도 브랜드는 진열, 후발은 샘플·쿠폰</p></div>
+<div class="card"><h3>습관적 구매행동</h3><p class="txt">소금, 생수. 충성보다 익숙함<br><b>전략:</b> 반복 광고, 가격 할인, 진열</p></div>
+</div>
+</div>
+</div>
+<div class="foot"><p class="label">6장 · 소비자 행동과 B2B 구매행동</p><p class="pgn"></p></div>
+</section>
+
+<section id="diffusion">
+<p class="eyebrow">6장 · 혁신 확산 (Rogers)</p>
+<h2>신제품은 누가, 언제 받아들이는가</h2>
+<div class="row" style="gap:0;height:64px;border-radius:12px;overflow:hidden;margin-bottom:12px">
+<div style="width:2.5%;background:#A84B25"></div>
+<div style="width:13.5%;background:#D27A4E"></div>
+<div style="width:6px;background:#F7F4ED"></div>
+<div class="grow" style="background:#2F6F73"></div>
+<div style="width:34%;background:#5E8E91"></div>
+<div style="width:16%;background:#9AA3AD"></div>
+</div>
+<p class="axis" style="margin-bottom:28px">← 빠름 · 수용 시점 · 느림 → &#160;&#160;&#160;조기 수용자와 조기 다수 사이의 간극이 <span style="color:#A84B25">캐즘(Chasm)</span></p>
+<div class="g5" style="gap:16px;margin-bottom:28px">
+<div class="card" style="border-top:8px solid #A84B25"><p class="big">2.5%</p><h3>혁신자</h3><p class="txt">모험적, 위험 감수</p></div>
+<div class="card" style="border-top:8px solid #D27A4E"><p class="big">13.5%</p><h3>조기 수용자</h3><p class="txt">존경받는 오피니언 리더</p></div>
+<div class="card" style="border-top:8px solid #2F6F73"><p class="big">34%</p><h3>조기 다수</h3><p class="txt">신중하지만 평균보다 먼저</p></div>
+<div class="card" style="border-top:8px solid #5E8E91"><p class="big">34%</p><h3>후기 다수</h3><p class="txt">회의적, 다수가 쓴 뒤 수용</p></div>
+<div class="card" style="border-top:8px solid #9AA3AD"><p class="big">16%</p><h3>지체자</h3><p class="txt">전통 지향, 변화에 저항</p></div>
+</div>
+<p class="note">확산 속도를 좌우하는 제품 특성: 상대적 이점 · 적합성 · 복잡성 · 시용 가능성 · 관찰 가능성</p>
+<div class="foot"><p class="label">6장 · 소비자 행동과 B2B 구매행동</p><p class="pgn"></p></div>
+</section>
+
+<section id="segmentation" class="alt">
+<p class="eyebrow">7장 · STP ① Segmentation</p>
+<h2>시장 세분화: 시장을 어떻게 나눌 것인가</h2>
+<div class="row" style="gap:40px">
+<div style="width:1040px">
+<table>
+<tr class="hd"><th style="width:20%">기준</th><th style="width:42%">변수</th><th style="width:38%">예시</th></tr>
+<tr><td><b>지리적</b></td><td>국가, 지역, 도시 규모, 기후</td><td>수도권 전용 새벽배송</td></tr>
+<tr class="band"><td><b>인구통계적</b></td><td>연령, 성별, 소득, 생애주기</td><td>실버세대 보험</td></tr>
+<tr><td><b>심리적</b></td><td>사회계층, 라이프스타일, 개성</td><td>가치 소비자용 비건 화장품</td></tr>
+<tr class="band"><td><b>행동적</b></td><td>추구 편익, 사용률, 충성도</td><td>헤비유저 전용 멤버십</td></tr>
+</table>
+<p class="note" style="margin-top:28px"><b>편익 세분화</b>는 행동적 세분화에 속합니다. 치약 시장을 충치 예방·미백·입냄새 제거로 나눈 사례가 고전적입니다.</p>
+</div>
+<div class="card navy grow">
+<h3>효과적 세분화의 5요건</h3>
+<p class="txt" style="font-size:28px;line-height:1.9">① 측정 가능성<br>② 접근 가능성<br>③ 실질성 (충분한 규모)<br>④ 차별성 (내부 동질, 외부 이질)<br>⑤ 실행 가능성</p>
+</div>
+</div>
+<div class="foot"><p class="label">7장 · STP 전략</p><p class="pgn"></p></div>
+</section>
+
+<section id="targeting">
+<p class="eyebrow">7장 · STP ② Targeting</p>
+<h2>표적 시장 전략: 어디까지 공략할 것인가</h2>
+<p class="lead">세분시장은 규모·성장성, 구조적 매력도, 자사 목표·자원과의 적합성으로 평가합니다.</p>
+<div class="g4" style="margin-bottom:28px">
+<div class="card in"><h3>비차별적 마케팅</h3><p class="txt">하나의 제품으로 전체 시장 공략. 규모의 경제</p><p class="txt" style="margin-top:12px;color:#A84B25"><b>생필품, 도입기 제품</b></p></div>
+<div class="card in d1"><h3>차별적 마케팅</h3><p class="txt">여러 세분시장에 각각 맞춘 프로그램. 비용 증가</p><p class="txt" style="margin-top:12px;color:#A84B25"><b>자원이 풍부한 대기업</b></p></div>
+<div class="card rust in d2"><h3>집중(틈새) 마케팅</h3><p class="txt">소수 세분시장에서 높은 점유율. 변화 시 위험 큼</p><p class="txt" style="margin-top:12px;color:#FBF6EE"><b>중소기업·스타트업</b></p></div>
+<div class="card in d3"><h3>미시 마케팅</h3><p class="txt">특정 지역·개인에 맞춤. 규모의 경제 상실</p><p class="txt" style="margin-top:12px;color:#A84B25"><b>지역 마케팅, 개인화 추천</b></p></div>
+</div>
+<p class="note">선택 시 고려 요인: 기업 자원, 제품·시장의 동질성, PLC 단계, 경쟁사 전략. 경쟁사가 세분화하는데 자사만 비차별적이면 불리합니다.</p>
+<div class="foot"><p class="label">7장 · STP 전략</p><p class="pgn"></p></div>
+</section>
+
+<section id="positioning">
+<p class="eyebrow">7장 · STP ③ Positioning</p>
+<h2>포지셔닝: 고객의 마음속 자리 잡기</h2>
+<div class="row" style="gap:40px">
+<div style="width:900px">
+<table>
+<tr class="hd"><th style="width:38%">포지셔닝 유형</th><th style="width:62%">예시</th></tr>
+<tr><td>속성·편익</td><td>“볼보 = 안전”</td></tr>
+<tr class="band"><td>사용 상황</td><td>“피로할 때 박카스”</td></tr>
+<tr><td>사용자</td><td>“프로를 위한 카메라”</td></tr>
+<tr class="band"><td>경쟁제품</td><td>“우리는 2등이라 더 열심히 합니다”</td></tr>
+<tr><td>제품군</td><td>“우유가 아닌 두유”</td></tr>
+</table>
+<p class="note" style="margin-top:24px"><b>선언문:</b> “(표적)에게 (브랜드)는 (범주) 중 (차별점)을 제공한다.”</p>
+</div>
+<div class="col grow" style="gap:20px">
+<div class="card"><h3>성공적인 가치 제안</h3><p class="txt">More for More · More for the Same<br>The Same for Less · Less for Much Less<br>More for Less (유지하기 어려움)</p></div>
+<div class="card rust"><h3>포지셔닝의 오류 4가지</h3><p class="txt">과소 · 과다 · 혼란 · 의심스러운 포지셔닝</p></div>
+</div>
+</div>
+<div class="foot"><p class="label">7장 · STP 전략</p><p class="pgn"></p></div>
+</section>
+
+<section id="product-levels" class="alt">
+<p class="eyebrow">8장 · 제품 (Product)</p>
+<h2>제품의 세 가지 수준과 소비재의 분류</h2>
+<div class="row" style="gap:40px">
+<div style="width:620px;background:#D9D1C0;border-radius:24px;padding:24px">
+<p class="txt" style="color:#1B2A3A"><b>확장 제품</b> · 배송·설치, 보증, A/S</p>
+<div style="background:#2F6F73;border-radius:20px;padding:24px;margin-top:16px">
+<p class="txt" style="color:#E3F0EF"><b>실체 제품</b> · 품질, 특징, 디자인, 브랜드명, 포장</p>
+<div style="background:#A84B25;border-radius:16px;padding:32px 24px;margin-top:16px">
+<p style="font-size:30px;font-weight:700;color:#FBF6EE">핵심 고객 가치</p>
+<p class="txt" style="color:#FBEDE2">고객이 진짜 사는 것<br>드릴 → ‘구멍’</p>
+</div>
+</div>
+</div>
+<div class="col grow">
+<table>
+<tr class="hd"><th style="width:20%">구분</th><th style="width:20%">편의품</th><th style="width:20%">선매품</th><th style="width:20%">전문품</th><th style="width:20%">비탐색품</th></tr>
+<tr><td>구매</td><td>즉시, 비교 최소</td><td>가격·품질 비교</td><td>강한 브랜드 선호</td><td>관심 낮음</td></tr>
+<tr class="band"><td>유통</td><td>개방적</td><td>선택적</td><td>전속적</td><td>다양</td></tr>
+<tr><td>예시</td><td>생수, 치약</td><td>가전, 의류</td><td>명품 시계</td><td>생명보험</td></tr>
+</table>
+<p class="note">보증·A/S는 <b>확장 제품</b>. 성숙 시장에서 차별화의 핵심 원천입니다.</p>
+</div>
+</div>
+<div class="foot"><p class="label">8장 · 제품 · 브랜드 · 서비스 전략</p><p class="pgn"></p></div>
+</section>
+
+<section id="brand">
+<p class="eyebrow">8장 · 브랜드 전략</p>
+<h2>브랜드 개발 전략 매트릭스</h2>
+<div class="row" style="gap:48px">
+<div class="row" style="gap:16px;width:980px">
+<div class="col" style="width:130px;gap:16px">
+<div class="grow" style="display:flex;align-items:center"><p class="axis">기존<br>브랜드명</p></div>
+<div class="grow" style="display:flex;align-items:center"><p class="axis">신규<br>브랜드명</p></div>
+</div>
+<div class="col grow" style="gap:12px">
+<div class="g2" style="gap:16px"><p class="axis">기존 제품 범주</p><p class="axis">신규 제품 범주</p></div>
+<div class="g2" style="gap:16px">
+<div class="card teal"><h3>라인 확장</h3><p class="txt">같은 범주에 새 맛·색·용량. 과도하면 자기잠식</p></div>
+<div class="card rust"><h3>브랜드 확장</h3><p class="txt">새 범주에 기존 브랜드. 실패 시 모 브랜드 희석</p></div>
+<div class="card"><h3>복수 브랜드</h3><p class="txt">같은 범주에 여러 브랜드. 자원 분산 위험</p></div>
+<div class="card"><h3>신규 브랜드</h3><p class="txt">새 범주에 새 브랜드. 비용이 크지만 위험 분리</p></div>
+</div>
+</div>
+</div>
+<div class="col grow">
+<div class="card navy"><h3>브랜드 자산</h3><p class="txt">아커: 인지도, 지각된 품질, 연상, 충성도<br>켈러(CBBE): 인지도 + 이미지</p></div>
+<div class="card"><h3>브랜드 인지 3단계</h3><p class="txt">재인 (보조) → 회상 (비보조) → 최초 상기</p></div>
+<div class="card"><h3>브랜드 소유권</h3><p class="txt">NB, PB(노브랜드), 라이선싱, 공동 브랜딩</p></div>
+</div>
+</div>
+<div class="foot"><p class="label">8장 · 제품 · 브랜드 · 서비스 전략</p><p class="pgn"></p></div>
+</section>
+
+<section id="plc" class="alt">
+<p class="eyebrow">8장 · 가장 자주 출제되는 표</p>
+<h2>제품수명주기 (PLC) 단계별 전략</h2>
+<div class="row" style="gap:0;margin-bottom:12px">
+<div class="col" style="width:266px;gap:8px;justify-content:center">
+<p class="axis" style="color:#A84B25">━ 매출</p>
+<p class="axis" style="color:#2F6F73">━ 이익</p>
+<p class="axis" style="color:#6B7480">┅ 손익 0</p>
+</div>
+<svg aria-label="도입기에서 쇠퇴기까지 매출은 S자로 늘어 성숙기에 정점을 찍고 감소하며, 이익은 도입기 적자에서 성장기 후반에 정점을 찍은 뒤 먼저 감소하는 곡선" width="1398" height="170" viewBox="0 0 1398 170" xmlns="http://www.w3.org/2000/svg">
+<line x1="349" y1="0" x2="349" y2="170" stroke="#C9C0AE" stroke-width="2" stroke-dasharray="6 6"/>
+<line x1="699" y1="0" x2="699" y2="170" stroke="#C9C0AE" stroke-width="2" stroke-dasharray="6 6"/>
+<line x1="1048" y1="0" x2="1048" y2="170" stroke="#C9C0AE" stroke-width="2" stroke-dasharray="6 6"/>
+<line x1="0" y1="125" x2="1398" y2="125" stroke="#6B7480" stroke-width="2" stroke-dasharray="3 6"/>
+<path d="M0 160 C 220 158, 300 130, 480 70 S 760 10, 900 12 S 1220 70, 1398 110" fill="none" stroke="#A84B25" stroke-width="6" stroke-linecap="round"/>
+<path d="M0 145 C 140 168, 260 165, 360 125 S 600 50, 760 55 S 1200 110, 1398 128" fill="none" stroke="#2F6F73" stroke-width="6" stroke-linecap="round"/>
+</svg>
+</div>
+<table style="font-size:24px">
+<tr class="hd"><th style="width:16%">구분</th><th style="width:21%">도입기</th><th style="width:21%">성장기</th><th style="width:21%">성숙기</th><th style="width:21%">쇠퇴기</th></tr>
+<tr><td><b>매출 · 이익</b></td><td>낮음 · 적자</td><td>급증 · 증가</td><td>최고점 · 높음</td><td>감소 · 감소</td></tr>
+<tr class="band"><td><b>고객</b></td><td>혁신자</td><td>조기 수용자</td><td>다수 수용자</td><td>지체자</td></tr>
+<tr><td><b>목표</b></td><td>인지와 시용 창출</td><td>점유율 극대화</td><td>이익 극대화, 방어</td><td>비용 절감, 수확</td></tr>
+<tr class="band"><td><b>가격</b></td><td>스키밍 또는 침투</td><td>시장 침투 가격</td><td>경쟁 대응 가격</td><td>가격 인하</td></tr>
+<tr><td><b>유통</b></td><td>선택적</td><td>집중적</td><td>더욱 집중적</td><td>선택적 (철수)</td></tr>
+<tr class="band"><td><b>판매촉진</b></td><td>시용 유도로 많이</td><td>감소</td><td>브랜드 전환용 증가</td><td>최소한</td></tr>
+</table>
+<div class="foot"><p class="label">8장 · 제품 · 브랜드 · 서비스 전략</p><p class="pgn"></p></div>
+<aside>성숙기 전략 3가지: 시장 수정(새 사용자·새 용도), 제품 수정(품질·특징·스타일), 마케팅 믹스 수정. PLC 변형으로 스타일, 패션, 패드가 있습니다.</aside>
+</section>
+
+<section id="service">
+<p class="eyebrow">8장 · 서비스 마케팅</p>
+<h2>서비스의 4대 특성 (IHIP)과 대응</h2>
+<div class="g4" style="margin-bottom:32px">
+<div class="card in"><p class="en">INTANGIBILITY</p><h3>무형성</h3><p class="txt">구매 전 보거나 시험할 수 없음</p><p class="txt" style="margin-top:12px;color:#1B2A3A"><b>→ 물리적 증거, 후기로 유형화</b></p></div>
+<div class="card in d1"><p class="en">HETEROGENEITY</p><h3>이질성</h3><p class="txt">제공자·시간·장소에 따라 품질 차이</p><p class="txt" style="margin-top:12px;color:#1B2A3A"><b>→ 직원 교육, 표준화, 매뉴얼</b></p></div>
+<div class="card in d2"><p class="en">INSEPARABILITY</p><h3>비분리성</h3><p class="txt">생산과 소비가 동시에 일어남</p><p class="txt" style="margin-top:12px;color:#1B2A3A"><b>→ 고객 참여 관리, 직원 선발</b></p></div>
+<div class="card in d3"><p class="en">PERISHABILITY</p><h3>소멸성</h3><p class="txt">저장할 수 없음</p><p class="txt" style="margin-top:12px;color:#1B2A3A"><b>→ 차등 가격, 예약, 파트타임</b></p></div>
+</div>
+<div class="g3">
+<div class="card navy"><h3>서비스 7P</h3><p class="txt">4P + 사람, 물리적 증거, 프로세스</p></div>
+<div class="card navy"><h3>서비스 이익 사슬</h3><p class="txt">직원 만족 → 서비스 가치 → 고객 충성 → 이익</p></div>
+<div class="card navy"><h3>SERVQUAL 5차원</h3><p class="txt">유형성, 신뢰성, 대응성, 확신성, 공감성</p></div>
+</div>
+<div class="foot"><p class="label">8장 · 제품 · 브랜드 · 서비스 전략</p><p class="pgn"></p></div>
+</section>
+
+<section id="pricing">
+<p class="eyebrow">9장 · 가격 (Price)</p>
+<h2>가격은 원가와 고객 가치 사이에서 정해진다</h2>
+<div class="row" style="gap:0;margin-bottom:28px;border-radius:12px;overflow:hidden">
+<p class="step" style="width:300px;border-radius:0;background:#4A5562">하한선 · 원가</p>
+<p class="step grow" style="border-radius:0;background:#2F6F73">경쟁사 가격과 기업 목표를 고려해 결정</p>
+<p class="step" style="width:360px;border-radius:0;background:#A84B25">상한선 · 고객 인지 가치</p>
+</div>
+<div class="g3" style="margin-bottom:28px">
+<div class="card in"><h3>고객 가치 기반</h3><p class="txt">인지 가치로 가격을 정한 뒤 원가를 맞춤. 가장 바람직함. EDLP vs 고저 가격</p></div>
+<div class="card in d1"><h3>원가 기반</h3><p class="txt">원가에 이익을 더함. 단순하지만 수요·경쟁 무시. 원가 ÷ (1 − 마진율)</p></div>
+<div class="card in d2"><h3>경쟁 기반</h3><p class="txt">경쟁사 전략·가격 기준. 시장 현실 반영, 가격 경쟁 유발 가능</p></div>
+</div>
+<div class="card navy row" style="align-items:center;gap:48px">
+<p style="font-family:'Noto Serif KR',Georgia,serif;font-size:44px;font-weight:700;color:#F0A868">BEP = 고정비 ÷ (가격 − 단위 변동비)</p>
+<p class="txt">예: 3억 ÷ (2만 − 1.4만) = <b style="color:#F7F4ED">50,000개</b><br>분모 = 단위당 공헌이익</p>
+</div>
+<div class="foot"><p class="label">9장 · 가격 전략</p><p class="pgn"></p></div>
+</section>
+
+<section id="new-price" class="alt">
+<p class="eyebrow">9장 · 신제품과 제품 믹스 가격</p>
+<h2>스키밍 vs 침투, 그리고 제품 믹스 가격</h2>
+<div class="row" style="gap:40px">
+<div style="width:960px">
+<table>
+<tr class="hd"><th style="width:20%">구분</th><th style="width:40%">스키밍</th><th style="width:40%">침투</th></tr>
+<tr><td>방식</td><td>초기 고가 후 점차 인하</td><td>처음부터 낮은 가격</td></tr>
+<tr class="band"><td>목표</td><td>개발비 조기 회수</td><td>빠른 점유율 확보</td></tr>
+<tr><td>수요</td><td>비탄력적</td><td>탄력적 (가격 민감)</td></tr>
+<tr class="band"><td>조건</td><td>고가 지불 고객 충분, 진입 어려움</td><td>규모의 경제, 진입 저지</td></tr>
+<tr><td>예시</td><td>신형 스마트폰, 게임 콘솔</td><td>저가항공, 구독 프로모션</td></tr>
+</table>
+</div>
+<div class="col grow" style="gap:14px">
+<div class="card" style="padding:18px 28px"><h3>종속 제품 가격</h3><p class="txt">프린터는 싸게, 잉크는 비싸게</p></div>
+<div class="card" style="padding:18px 28px"><h3>묶음 가격</h3><p class="txt">세트 메뉴, 통신 결합 상품</p></div>
+<div class="card" style="padding:18px 28px"><h3>2부제 가격</h3><p class="txt">기본료 + 사용료 (놀이공원)</p></div>
+<div class="card" style="padding:18px 28px"><h3>심리적 가격</h3><p class="txt">단수 9,900원, 준거, 관습, 명성 가격</p></div>
+</div>
+</div>
+<div class="foot"><p class="label">9장 · 가격 전략</p><p class="pgn"></p></div>
+<aside>나머지 제품 믹스 가격: 제품 계열 가격, 선택 제품 가격, 부산물 가격. 베버의 법칙: 가격 변화 인지는 절대량이 아니라 기준 가격 대비 비율에 따르며, 최소 인지 변화량을 JND라 합니다.</aside>
+</section>
+
+<section id="distribution">
+<p class="eyebrow">10장 · 유통 (Place)</p>
+<h2>유통 경로의 조직과 커버리지</h2>
+<div class="row" style="gap:28px;margin-bottom:28px">
+<div class="card navy" style="width:520px"><h3>중간상이 필요한 이유</h3><p class="txt">제조업체 3 × 고객 3 = <b style="color:#F7F4ED">9번</b> 거래<br>중간상 1곳이 있으면 3 + 3 = <b style="color:#F0A868">6번</b><br>총거래수 최소화의 원칙</p></div>
+<div class="col grow" style="gap:12px">
+<h3>수직적 마케팅 시스템(VMS) · 통제력 강 → 약</h3>
+<div class="row" style="gap:12px">
+<div class="card rust grow"><h3>기업형</h3><p class="txt">소유로 통합 · 자라</p></div>
+<p class="arrow">›</p>
+<div class="card teal grow"><h3>계약형</h3><p class="txt">계약 · 프랜차이즈</p></div>
+<p class="arrow">›</p>
+<div class="card grow"><h3>관리형</h3><p class="txt">영향력으로 협력</p></div>
+</div>
+</div>
+</div>
+<table>
+<tr class="hd"><th style="width:22%">커버리지 전략</th><th style="width:40%">내용</th><th style="width:22%">적합한 제품</th><th style="width:16%">통제력</th></tr>
+<tr><td><b>개방적</b></td><td>가능한 한 많은 점포에서 판매</td><td>편의품</td><td>낮음</td></tr>
+<tr class="band"><td><b>선택적</b></td><td>기준을 충족하는 일부 점포</td><td>선매품</td><td>중간</td></tr>
+<tr><td><b>전속적</b></td><td>지역별 극소수 점포에 독점권</td><td>전문품</td><td>높음</td></tr>
+</table>
+<div class="foot"><p class="label">10장 · 유통 전략</p><p class="pgn"></p></div>
+<aside>함께 기억할 개념: 수평적·수직적 갈등, 유통 파워 5원천(보상·강압·합법·준거·전문), 소매수레바퀴 이론, 옴니채널과 쇼룸핑, 채찍 효과.</aside>
+</section>
+
+<section id="promotion-mix" class="alt">
+<p class="eyebrow">11장 · 촉진 (Promotion)</p>
+<h2>촉진 믹스의 다섯 가지 도구</h2>
+<table style="font-size:24px">
+<tr class="hd"><th style="width:20%">도구</th><th style="width:34%">정의</th><th style="width:24%">장점</th><th style="width:22%">단점</th></tr>
+<tr><td><b>광고</b></td><td>비용을 지불하는 비인적 커뮤니케이션</td><td>넓은 도달, 이미지 구축</td><td>일방향, 총비용 큼</td></tr>
+<tr class="band"><td><b>판매 촉진</b></td><td>구매를 유도하는 단기 인센티브</td><td>즉각적 반응, 시용 유도</td><td>단기적, 브랜드 훼손</td></tr>
+<tr><td><b>인적 판매</b></td><td>판매원이 고객과 직접 상호작용</td><td>쌍방향, 맞춤 설득</td><td><b>접촉당 비용 최대</b></td></tr>
+<tr class="band"><td><b>PR</b></td><td>공중과 좋은 관계를 형성</td><td><b>신뢰성 최고</b>, 저비용</td><td>통제력이 낮음</td></tr>
+<tr><td><b>디지털·다이렉트</b></td><td>표적 고객과 직접 연결</td><td>개인화, 성과 측정</td><td>개인정보 우려</td></tr>
+</table>
+<p class="note" style="margin-top:28px"><b>IMC(통합적 마케팅 커뮤니케이션):</b> 여러 촉진 수단을 따로 쓰지 않고 하나의 일관된 메시지로 통합합니다. 반응 위계는 AIDA: 주목 → 관심 → 욕구 → 행동.</p>
+<div class="foot"><p class="label">11장 · 촉진 전략과 IMC</p><p class="pgn"></p></div>
+</section>
+
+<section id="push-pull">
+<p class="eyebrow">11장 · 촉진 전략과 예산</p>
+<h2>푸시 전략 vs 풀 전략</h2>
+<div class="g2" style="gap:32px;margin-bottom:32px">
+<div class="card navy">
+<p class="en">PUSH · 제조업체 → 중간상 → 소비자</p>
+<h3>밀어내기</h3>
+<p class="txt"><b style="color:#F7F4ED">도구:</b> 인적 판매, 유통 촉진(공제·장려금)<br><b style="color:#F7F4ED">상황:</b> 브랜드 충성도 낮음, 점포에서 브랜드 선택<br><b style="color:#F7F4ED">예:</b> 후발 식품 브랜드의 입점 장려금</p>
+</div>
+<div class="card rust">
+<p class="en">PULL · 소비자가 찾아서 요구</p>
+<h3>끌어당기기</h3>
+<p class="txt"><b style="color:#FBF6EE">도구:</b> 광고, 소비자 촉진, 디지털 마케팅<br><b style="color:#FBF6EE">상황:</b> 충성도·관여도 높음, 방문 전 브랜드 결정<br><b style="color:#FBF6EE">예:</b> 인텔 인사이드 캠페인</p>
+</div>
+</div>
+<h3>촉진 예산 결정 4방법</h3>
+<div class="g4" style="margin-top:8px">
+<div class="card" style="padding:20px 24px"><h3>가용 예산법</h3><p class="txt">감당할 수 있는 만큼</p></div>
+<div class="card" style="padding:20px 24px;border-color:#A84B25"><h3>매출액 비율법</h3><p class="txt">인과 역전 비판</p></div>
+<div class="card" style="padding:20px 24px"><h3>경쟁 대등법</h3><p class="txt">경쟁사 지출에 맞춤</p></div>
+<div class="card" style="padding:20px 24px"><h3>목표 과업법</h3><p class="txt">가장 논리적</p></div>
+</div>
+<div class="foot"><p class="label">11장 · 촉진 전략과 IMC</p><p class="pgn"></p></div>
+</section>
+
+<section id="digital" class="alt">
+<p class="eyebrow">12장 · 디지털 마케팅</p>
+<h2>POE 모형과 성과 지표</h2>
+<div class="row" style="gap:40px">
+<div class="col" style="width:640px;gap:16px">
+<div class="card in"><p class="en">PAID MEDIA</p><h3>유료 매체</h3><p class="txt">검색 광고, SNS 광고, 배너</p></div>
+<div class="card in d1"><p class="en">OWNED MEDIA</p><h3>소유 매체</h3><p class="txt">자사 홈페이지, 앱, 공식 계정</p></div>
+<div class="card teal in d2"><p class="en">EARNED MEDIA</p><h3>획득 매체</h3><p class="txt">리뷰, 구전, 공유, 기사</p></div>
+</div>
+<div class="col grow" style="gap:20px">
+<table>
+<tr class="hd"><th style="width:30%">지표</th><th style="width:44%">계산</th><th style="width:26%">예시</th></tr>
+<tr><td><b>CTR</b></td><td>클릭 ÷ 노출</td><td>2%</td></tr>
+<tr class="band"><td><b>CVR</b></td><td>전환 ÷ 클릭</td><td>5%</td></tr>
+<tr><td><b>CPC</b></td><td>광고비 ÷ 클릭</td><td>500원</td></tr>
+<tr class="band"><td><b>CPA</b></td><td>광고비 ÷ 전환</td><td>1만 원</td></tr>
+<tr><td><b>ROAS</b></td><td>광고 매출 ÷ 광고비</td><td>500%</td></tr>
+</table>
+<p class="note">예시 조건: 광고비 100만 원, 노출 10만, 클릭 2,000, 구매 100건, 매출 500만 원</p>
+</div>
+</div>
+<div class="foot"><p class="label">12장 · 디지털 · 글로벌 · 지속가능 마케팅</p><p class="pgn"></p></div>
+</section>
+
+<section id="global">
+<p class="eyebrow">12장 · 글로벌과 지속가능성</p>
+<h2>해외 진출 방식과 지속가능 마케팅</h2>
+<div class="row" style="gap:40px">
+<div class="col ladder" style="width:780px;gap:10px">
+<p class="axis">위험·통제·투자 낮음 ↓ 높음</p>
+<p class="step light" style="text-align:left;margin-right:300px">간접 수출</p>
+<p class="step light" style="text-align:left;margin-right:250px">직접 수출</p>
+<p class="step light" style="text-align:left;margin-right:200px">라이선싱</p>
+<p class="step light" style="text-align:left;margin-right:150px">프랜차이즈</p>
+<p class="step" style="text-align:left;margin-right:100px;background:#2F6F73">계약 생산 / 관리 계약</p>
+<p class="step" style="text-align:left;margin-right:50px">합작 투자 (JV)</p>
+<p class="step" style="text-align:left;background:#A84B25">해외 직접 투자 (FDI)</p>
+</div>
+<div class="col grow" style="gap:16px">
+<div class="card navy"><h3>글로컬 (Glocal)</h3><p class="txt">세계적으로 생각하고 지역적으로 행동. 맥도날드의 현지 메뉴</p></div>
+<div class="card" style="padding:20px 28px"><h3>ESG</h3><p class="txt">환경·사회·지배구조를 기업 가치에 반영</p></div>
+<div class="card" style="padding:20px 28px"><h3>그린워싱</h3><p class="txt">친환경성을 실제보다 과장하는 행위</p></div>
+<div class="card" style="padding:20px 28px"><h3>디마케팅</h3><p class="txt">수요를 줄이는 마케팅 (초과 수요)</p></div>
+</div>
+</div>
+<div class="foot"><p class="label">12장 · 디지털 · 글로벌 · 지속가능 마케팅</p><p class="pgn"></p></div>
+</section>
+
+<section id="quiz" class="dark">
+<p class="eyebrow">예상 문제 · 객관식</p>
+<h2>풀어 보고, 클릭해서 정답 확인</h2>
+<div class="g2" style="gap:28px">
+<div class="card"><h3>Q1. 마케터가 만들어 낼 수 없는 것은?</h3><p class="txt">① 욕구 ② 수요 ③ 필요 ④ 시장 제공물</p><p class="txt fragment" style="margin-top:12px;color:#F0A868"><b>정답 ③</b> 필요는 인간에게 본래 존재합니다.</p></div>
+<div class="card"><h3>Q2. 저성장 · 고점유 사업은?</h3><p class="txt">① 별 ② 현금젖소 ③ 물음표 ④ 개</p><p class="txt fragment" style="margin-top:12px;color:#F0A868"><b>정답 ②</b> 다른 사업에 자금을 공급합니다.</p></div>
+<div class="card"><h3>Q3. 저관여 · 브랜드 차이 큼 (과자)?</h3><p class="txt">① 복잡한 ② 부조화 감소 ③ 습관적 ④ 다양성 추구</p><p class="txt fragment" style="margin-top:12px;color:#F0A868"><b>정답 ④</b> 싫증이 나서 브랜드를 바꿉니다.</p></div>
+<div class="card"><h3>Q4. 편의점 프랜차이즈의 유통 형태는?</h3><p class="txt">① 기업형 VMS ② 계약형 VMS ③ 관리형 VMS ④ 수평적</p><p class="txt fragment" style="margin-top:12px;color:#F0A868"><b>정답 ②</b> 독립 기업들이 계약으로 결합합니다.</p></div>
+</div>
+<div class="foot"><p class="label" style="color:#9FB0C0">정리 · 예상 문제</p><p class="pgn" style="color:#9FB0C0"></p></div>
+</section>
+
+<section id="calc" class="dark">
+<p class="eyebrow">예상 문제 · 계산</p>
+<h2>시험장에서 반드시 나오는 계산 세 가지</h2>
+<div class="g3">
+<div class="card"><p class="en" style="color:#F0A868">손익분기점</p><h3>고정비 5,000만 원, 변동비 6,000원, 판매가 10,000원</h3><p class="txt fragment" style="margin-top:16px">공헌이익 4,000원<br>5,000만 ÷ 4,000<br><b style="color:#F0A868;font-size:36px">= 12,500개</b></p></div>
+<div class="card"><p class="en" style="color:#F0A868">가격 탄력성</p><h3>가격 10% 인하, 판매량 25% 증가</h3><p class="txt fragment" style="margin-top:16px">25% ÷ 10% = 2.5 (탄력적)<br>0.9 × 1.25 = 1.125<br><b style="color:#F0A868;font-size:36px">총매출 12.5% 증가</b></p></div>
+<div class="card"><p class="en" style="color:#F0A868">상대적 점유율</p><h3>A사 30%, B사 20%, C사 15%</h3><p class="txt fragment" style="margin-top:16px">A: 30 ÷ 20 = 1.5<br>C: 15 ÷ 30 = 0.5<br><b style="color:#F0A868;font-size:36px">1.0 초과 = 선도자</b></p></div>
+</div>
+<div class="foot"><p class="label" style="color:#9FB0C0">정리 · 예상 문제</p><p class="pgn" style="color:#9FB0C0"></p></div>
+</section>
+
+<section id="summary" class="center" style="background:#A84B25">
+<p class="eyebrow in" style="color:#FBEDE2">한 문장 요약</p>
+<p class="in d1" style="font-family:'Noto Serif KR',Georgia,serif;font-size:64px;font-weight:700;line-height:1.35;color:#FBF6EE;width:1500px">마케팅은 환경과 고객을 분석해 누구에게 어떤 가치를 줄지 정하고, 그 가치를 4P로 실현하여 고객 관계와 이익을 얻는 과정이다.</p>
+<div class="row in d2" style="gap:16px;margin-top:56px">
+<p class="pill" style="background:#1B2A3A">분석 · 3~6장</p><p class="arrow" style="color:#FBF6EE">→</p>
+<p class="pill" style="background:#1B2A3A">STP · 7장</p><p class="arrow" style="color:#FBF6EE">→</p>
+<p class="pill" style="background:#1B2A3A">4P · 8~11장</p><p class="arrow" style="color:#FBF6EE">→</p>
+<p class="pill" style="background:#1B2A3A">관계와 이익 · 1장</p>
+</div>
+<aside>어떤 문제를 받더라도 이 흐름의 어느 단계를 묻는지 먼저 파악하면 답의 방향이 보입니다.</aside>
+</section>
+
+</div>
+
+<div id="notes"></div>
+<div id="hud"><span id="count"></span>
+<button id="prev" title="이전 (←)">‹</button><button id="next" title="다음 (→ / Space)">›</button>
+<button id="ntoggle" title="발표자 노트 (N)">노트</button><button id="fs" title="전체 화면 (F)">⛶</button></div>
+
+<script>
+(function () {
+  var stage = document.getElementById('stage');
+  var slides = Array.prototype.slice.call(stage.querySelectorAll(':scope > section'));
+  var notes = document.getElementById('notes');
+  var count = document.getElementById('count');
+  var cur = 0;
+
+  slides.forEach(function (s, i) {
+    var p = s.querySelector('.pgn');
+    if (p) p.textContent = String(i + 1);
+  });
+
+  function fit() {
+    var k = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    stage.style.transform = 'translate(-50%, -50%) scale(' + k + ')';
+    stage.style.transformOrigin = 'center center';
+  }
+
+  function frags(s) { return Array.prototype.slice.call(s.querySelectorAll('.fragment')); }
+
+  function show(i, fromEnd) {
+    cur = Math.max(0, Math.min(slides.length - 1, i));
+    slides.forEach(function (s, j) { s.classList.toggle('active', j === cur); });
+    frags(slides[cur]).forEach(function (f) { f.classList.toggle('visible', !!fromEnd); });
+    var a = slides[cur].querySelector('aside');
+    notes.textContent = a ? a.textContent : '(노트 없음)';
+    count.textContent = (cur + 1) + ' / ' + slides.length;
+    if (location.hash !== '#slide-' + (cur + 1)) history.replaceState(null, '', '#slide-' + (cur + 1));
+  }
+
+  function next() {
+    var hidden = frags(slides[cur]).filter(function (f) { return !f.classList.contains('visible'); });
+    if (hidden.length) { hidden[0].classList.add('visible'); return; }
+    if (cur < slides.length - 1) show(cur + 1);
+  }
+  function prev() {
+    var shown = frags(slides[cur]).filter(function (f) { return f.classList.contains('visible'); });
+    if (shown.length) { shown[shown.length - 1].classList.remove('visible'); return; }
+    if (cur > 0) show(cur - 1, true);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (['ArrowRight', 'PageDown', ' ', 'Enter'].indexOf(e.key) >= 0) { e.preventDefault(); next(); }
+    else if (['ArrowLeft', 'PageUp', 'Backspace'].indexOf(e.key) >= 0) { e.preventDefault(); prev(); }
+    else if (e.key === 'Home') show(0);
+    else if (e.key === 'End') show(slides.length - 1);
+    else if (e.key === 'n' || e.key === 'N') notes.classList.toggle('on');
+    else if (e.key === 'f' || e.key === 'F') toggleFs();
+  });
+  function toggleFs() {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen && document.documentElement.requestFullscreen();
+    else document.exitFullscreen && document.exitFullscreen();
+  }
+  document.getElementById('next').onclick = next;
+  document.getElementById('prev').onclick = prev;
+  document.getElementById('ntoggle').onclick = function () { notes.classList.toggle('on'); };
+  document.getElementById('fs').onclick = toggleFs;
+  stage.addEventListener('click', next);
+
+  var tx = null;
+  document.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (tx === null) return;
+    var dx = e.changedTouches[0].clientX - tx; tx = null;
+    if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
+  });
+
+  window.addEventListener('resize', fit);
+  fit();
+  var m = /#slide-(\d+)/.exec(location.hash);
+  show(m ? parseInt(m[1], 10) - 1 : 0);
+})();
+</script>
+</body>
+</html>
